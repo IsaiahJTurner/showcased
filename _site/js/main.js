@@ -17,16 +17,28 @@ function shuffle(array) {
 
     return array;
 }
+jQuery.fn.extend({
+    lazyload: function() {
+        var $this = this;
+        $this.css('opacity','0');
+        $.get($this.attr("data-original"), function(data) {
+            setTimeout(function() {
+              $this.attr('src', $this.attr("data-original")).animate({opacity: 1}, 1000);
+            }, Math.floor(Math.random() * 3000));
+        });
+        return $this;
+    }
+});
 $(document).ready(function() {
 
     $('.slider').unslider({
-      nav: false,
-      keys: false,
-      autoplay: true,
-      speed: 500,
-      delay: 4000,
-      arrows: false,
-      infinite: true
+        nav: false,
+        keys: false,
+        autoplay: true,
+        speed: 500,
+        delay: 4000,
+        arrows: false,
+        infinite: true
     });
 
 
@@ -37,6 +49,8 @@ $(document).ready(function() {
     }
     var setsCreated = 0;
 
+    var imageCount;
+    var isFirst = true;
     function addImageSet() {
         shuffle(imageIds);
         var $imageSet = $('<div class="image-set" data-id="' + (setsCreated++) + '"></div>');
@@ -48,10 +62,12 @@ $(document).ready(function() {
         }, 100);
         for (var i = 0; i < imageIds.length; i++) {
             var version = window.devicePixelRatio > 1 ? "@" + window.devicePixelRatio + "x" : "";
-            $imageSet.append("<img src='img/cards/" + imageIds[i] + version + ".png' />").lazyload({
-              effect: "fadeIn"
-            });
+            var event = "image-" + (imageCount++);
+            var $image = $('<img data-original="img/cards/' + imageIds[i] + version + '.png" width="100" height="200" />');
+            if (isFirst) $image.lazyload();
+            $imageSet.append($image);
         }
+        isFirst = false;
         $apps.append($imageSet);
         return $imageSet;
     }
