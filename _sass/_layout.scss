@@ -1,153 +1,156 @@
 /**
  * Site header
  */
- .banner {
-   position: relative;
-   overflow: hidden;
-   .header {
-       border-top: 38px solid black;
-       background-image: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0.0));
-       z-index: 2;
-       position: relative;
-       .wrapper {
-         height: 182px;
-       }
-       .upper {
-         .logo {
-             width: 158px;
-             height: 16.2px;
-             background-image: url('../img/logo.svg');
-             display: inline-block;
-             position: absolute;
-             top: -3px;
-             left: 0;
-         }
-         .sign-up {
-             top: -10px;
-             position: absolute;
-             right: 0;
-             width: 106px;
-             height: 42px;
-             border-radius: 8px;
-             border: solid 2px rgba(255, 255, 255, 0.5);
-             font-size: 18px;
-     	      color: #ffffff;
-             outline: none!important;
-             background: none!important;
-             cursor: pointer!important;
-             &:active {
-               box-shadow: inset 0px 0px 10px rgba(0,0,0,1);
-             }
-         }
-       }
-       .lower {
-         position: absolute;
-         bottom: 0;
-         width: 100%;
-         left: 0;
-         padding: 0 10px;
-         h1 {
-           font-size: 30px;
-         	text-align: center;
-         	color: #ffffff;
-         	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-           font-weight: 500;
-         }
-       }
-   }
-   .video {
-     padding-top: 26px;
-     z-index: 2;
-     position: relative;
-     text-align: center;
-     padding-bottom: 323px;
-   }
-   .apps-overlay {
-     position: absolute;
-     background: black;
-     opacity: 0.7;
-     z-index: 1;
-     height: 100%;
-     width: 100%;
-     top: 0;
-   }
-   .apps {
-     line-height: 0;
-     font-size: 0;
-     background: black;
-     z-index: 0;
-     position: absolute;
-     top: 0;
-     text-align: center;
-     img {
-       width: 258px;
-       height: 146.86px;
-       padding: 5px;
-     }
-   }
- }
-
-.content {
-  .share-work {
+.banner {
     position: relative;
-    background-color: #000000;
-	  box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
-    .wrap {
-      max-width: 987px;
-      margin: auto;
-      .phone {
-        vertical-align: bottom;
+    overflow: hidden;
+    .header {
+        border-top: 38px solid black;
+        background-image: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0.0));
+        z-index: 2;
         position: relative;
-        display: inline-block;
-        margin-top: 56px;
-        width: 437px + 44px;
-  	    height: 616px;
-        @include background-image-retina("../img/portfolio", png, 437px + 44px, 616px);
-        background-size: contain;
-        .slider {
-          width: calc(100% - 44px);
-          margin: auto;
-          margin-top: 89px;
-          background: black;
-          ul {
-            li {
-              div {
-                width: 437px;
-                height: 299px;
-                background-size: cover;
-                border-radius: 4px;
-              }
-            }
-          }
+        .wrapper {
+            height: 182px;
         }
-      }
-      .right {
-        color: white;
-        display: inline-block;
-        max-width: 498px;
-        position: absolute;
-        height: 100%;
-        padding-left: 50px;
-        .table {
-          height: 100%;
-          display: table;
-          .table-cell {
-            display: table-cell;
-            vertical-align: middle;
-            .title {
-              font-size: 38px;
-              margin-bottom: 8px;
+        .upper {
+            .logo {
+                width: 158px;
+                height: 16.2px;
+                background-image: url('../img/logo.svg');
+                display: inline-block;
+                position: absolute;
+                top: -3px;
+                left: 0;
             }
-            .description {
-              color: #c0c3c7;
+            .sign-up {
+                top: -10px;
+                position: absolute;
+                right: 0;
+                width: 106px;
+                height: 42px;
+                border-radius: 8px;
+                border: solid 2px rgba(255, 255, 255, 0.5);
+                font-size: 18px;
+                color: #ffffff;
+                outline: none!important;
+                background: none!important;
+                cursor: pointer!important;
+                &:active {
+                    box-shadow: inset 0 0 10px rgba(0,0,0,1);
+                }
             }
-          }
         }
-      }
+        .lower {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            padding: 0 10px;
+            h1 {
+                font-size: 30px;
+                text-align: center;
+                color: #ffffff;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+                font-weight: 500;
+            }
+        }
     }
-  }
+    .video {
+        padding-top: 26px;
+        z-index: 2;
+        position: relative;
+        text-align: center;
+        padding-bottom: 323px;
+    }
+    .apps-overlay {
+        position: absolute;
+        background: rgba(0,0,0,0.7);
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        .bottom-shadow {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 146px;
+            background: linear-gradient(to top, #000000, rgba(0, 0, 0, 0.0));
+        }
+    }
+    .apps {
+        line-height: 0;
+        font-size: 0;
+        background: black;
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        text-align: center;
+        img {
+            width: 258px;
+            height: 146.86px;
+            padding: 5px;
+        }
+    }
 }
-
+.content {
+    .share-work {
+        position: relative;
+        background-color: #000000;
+        box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
+        .wrap {
+            max-width: 987px;
+            margin: auto;
+            .phone {
+                vertical-align: bottom;
+                position: relative;
+                display: inline-block;
+                margin-top: 56px;
+                width: 437px + 44px;
+                height: 616px;
+                @include background-image-retina("../img/portfolio", png, 437px + 44px, 616px);
+                background-size: contain;
+                .slider {
+                    width: calc(100% - 44px);
+                    margin: 89px auto auto;
+                    background: black;
+                    ul {
+                        li {
+                            div {
+                                width: 437px;
+                                height: 299px;
+                                background-size: cover;
+                                border-radius: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+            .right {
+                color: white;
+                display: inline-block;
+                max-width: 498px;
+                position: absolute;
+                height: 100%;
+                padding-left: 50px;
+                .table {
+                    height: 100%;
+                    display: table;
+                    .table-cell {
+                        display: table-cell;
+                        vertical-align: middle;
+                        .title {
+                            font-size: 38px;
+                            margin-bottom: 8px;
+                        }
+                        .description {
+                            color: #c0c3c7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 /**
  * Site footer
  */
@@ -156,17 +159,17 @@
     padding: 19px 0 20px;
     background: white;
     .copyright {
-      font-size: 14px;
-	    color: #a9afb6;
-      display: inline-block;
+        font-size: 14px;
+        color: #a9afb6;
+        display: inline-block;
     }
     .links {
-      position: absolute;
-      right: 0;
-      display: inline-block;
-      list-style: none;
-      .link {
+        position: absolute;
+        right: 0;
         display: inline-block;
-      }
+        list-style: none;
+        .link {
+            display: inline-block;
+        }
     }
 }
