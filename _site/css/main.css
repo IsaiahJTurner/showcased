@@ -1,0 +1,58 @@
+/** Reset some basic elements */
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, li, figure { margin: 0; padding: 0; }
+
+/** Basic styling */
+body { font: normal 20px/28px "SFUIText-Regular", "Helvetica Neue", "Roboto", Helvetica, Arial, sans-serif; color: #131720; background: black; -webkit-text-size-adjust: 100%; -webkit-font-feature-settings: "kern" 1; -moz-font-feature-settings: "kern" 1; -o-font-feature-settings: "kern" 1; font-feature-settings: "kern" 1; font-kerning: normal; }
+body .container { background-color: #f4f7f9; }
+
+/** Set `margin-bottom` to maintain vertical rhythm */
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure { margin-bottom: 0; }
+
+/** Images */
+img { max-width: 100%; }
+
+/** Headings */
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+
+/** Links */
+a { color: #3f80ff; text-decoration: none; }
+a:hover { color: #131720; text-decoration: underline; }
+
+/** Wrapper */
+.wrapper { max-width: 1318px; margin-right: auto; margin-left: auto; position: relative; padding-right: 10px; padding-left: 10px; }
+@media screen and (max-width: 800px) { .wrapper { padding-right: 20px; padding-left: 20px; } }
+
+/** Clearfix */
+.wrapper:after { content: ""; display: table; clear: both; }
+
+/** Site header */
+.banner { position: relative; overflow: hidden; }
+.banner .header { border-top: 38px solid black; background-image: linear-gradient(to bottom, #000000, transparent); z-index: 2; position: relative; }
+.banner .header .wrapper { height: 182px; }
+.banner .header .upper .logo { width: 158px; height: 16.2px; background-image: url("/img/logo.svg"); display: inline-block; position: absolute; top: -3px; left: 0; }
+.banner .header .upper .sign-up { top: -10px; position: absolute; right: 0; width: 106px; height: 42px; border-radius: 8px; border: solid 2px rgba(255, 255, 255, 0.5); font-size: 18px; color: #ffffff; outline: none !important; background: none !important; cursor: pointer !important; }
+.banner .header .upper .sign-up:active { box-shadow: inset 0px 0px 10px black; }
+.banner .header .lower { position: absolute; bottom: 0; width: 100%; left: 0; padding: 0 10px; }
+.banner .header .lower h1 { font-size: 30px; text-align: center; color: #ffffff; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); font-weight: 500; }
+.banner .video { padding-top: 26px; z-index: 2; position: relative; text-align: center; padding-bottom: 323px; }
+.banner .apps-overlay { position: absolute; background: black; opacity: 0.7; z-index: 1; height: 100%; width: 100%; top: 0; }
+.banner .apps { line-height: 0; font-size: 0; background: black; z-index: 0; position: absolute; top: 0; text-align: center; }
+.banner .apps img { width: 258px; height: 146.86px; padding: 5px; }
+
+.content .share-work { position: relative; background-color: #000000; box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.1); }
+.content .share-work .wrap { max-width: 987px; margin: auto; }
+.content .share-work .wrap .phone { vertical-align: bottom; position: relative; display: inline-block; margin-top: 56px; width: 481px; height: 616px; background-image: url("/img/portfolio.png"); background-image: url("/img/portfolio@3x.png"); background-size: contain; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) { .content .share-work .wrap .phone { background-image: url("/img/portfolio@2x.png"); -webkit-background-size: 481px 616px; -moz-background-size: 481px 616px; -o-background-size: 481px 616px; background-size: 481px 616px; } }
+.content .share-work .wrap .phone .slider { width: calc(100% - 44px); margin: auto; margin-top: 89px; background: black; }
+.content .share-work .wrap .phone .slider ul li div { width: 437px; height: 299px; background-size: cover; border-radius: 4px; }
+.content .share-work .wrap .right { color: white; display: inline-block; max-width: 498px; position: absolute; height: 100%; padding-left: 50px; }
+.content .share-work .wrap .right .table { height: 100%; display: table; }
+.content .share-work .wrap .right .table .table-cell { display: table-cell; vertical-align: middle; }
+.content .share-work .wrap .right .table .table-cell .title { font-size: 38px; margin-bottom: 8px; }
+.content .share-work .wrap .right .table .table-cell .description { color: #c0c3c7; }
+
+/** Site footer */
+.footer { border-top: 1px solid #e8e8e8; padding: 19px 0 20px; background: white; }
+.footer .copyright { font-size: 14px; color: #a9afb6; display: inline-block; }
+.footer .links { position: absolute; right: 0; display: inline-block; list-style: none; }
+.footer .links .link { display: inline-block; }
