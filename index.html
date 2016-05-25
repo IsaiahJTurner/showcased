@@ -2,22 +2,32 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="share-work">
+  <div class="wrap">
+    <div class="phone">
+      <div class="slider">
+        <ul>
+          <li><div style="background-image: url('/img/designs/1.jpg')"></div></li>
+          <li><div style="background-image: url('/img/designs/2.jpg')"></div></li>
+          <li><div style="background-image: url('/img/designs/3.jpg')"></div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="right">
+      <div class="table">
+        <div class="table-cell">
+          <div class="title">
+            Share your work
+          </div>
+          <div class="description">
+            Your showcased card contains
+            much more than your contact info.
+            It has your entire portfolio.
+            Show examples of your work.
+            Say what you do.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
