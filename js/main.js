@@ -48,7 +48,9 @@ $(document).ready(function() {
         }, 100);
         for (var i = 0; i < imageIds.length; i++) {
             var version = window.devicePixelRatio > 1 ? "@" + window.devicePixelRatio + "x" : "";
-            $imageSet.append("<img src='img/cards/" + imageIds[i] + version + ".png' />");
+            $imageSet.append("<img src='img/cards/" + imageIds[i] + version + ".png' />").lazyload({
+              effect: "fadeIn"
+            });
         }
         $apps.append($imageSet);
         return $imageSet;
