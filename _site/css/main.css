@@ -14,6 +14,10 @@ img { max-width: 100%; }
 /** Headings */
 h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 
+h2 { font-size: 38px; }
+
+h3 { font-size: 34px; }
+
 /** Links */
 a { color: #3f80ff; text-decoration: none; }
 a:hover { color: #131720; text-decoration: underline; }
@@ -49,11 +53,22 @@ a:hover { color: #131720; text-decoration: underline; }
 .content .share-work .wrap .right { color: white; display: inline-block; max-width: 498px; position: absolute; height: 100%; padding-left: 50px; }
 .content .share-work .wrap .right .table { height: 100%; display: table; }
 .content .share-work .wrap .right .table .table-cell { display: table-cell; vertical-align: middle; }
-.content .share-work .wrap .right .table .table-cell .title { font-size: 38px; margin-bottom: 8px; }
+.content .share-work .wrap .right .table .table-cell .title { margin-bottom: 8px; }
 .content .share-work .wrap .right .table .table-cell .description { color: #c0c3c7; }
+.content .cross-platform { background: white; height: 674px; text-align: center; padding-top: 85px; }
+.content .cross-platform .description { margin: 13px auto 54px; font-size: 20px; color: #7e868f; width: 421px; }
+.content .event-organizer { color: white; text-align: center; background: black; padding-top: 65px; }
+.content .event-organizer .description { margin: 13px auto 54px; font-size: 20px; color: #c0c3c7; width: 461px; }
+.content .event-organizer .graph { margin: auto; width: 721px; height: 400px; background-size: contain; background-position-y: bottom; background-position-x: center; background-repeat: no-repeat; background-image: url("../img/graph.svg"); }
+.content .sign-up { height: 412px; text-align: center; }
+.content .sign-up .title { margin-top: 76px; }
 
 /** Site footer */
 .footer { border-top: 1px solid #e8e8e8; padding: 19px 0 20px; background: white; }
 .footer .copyright { font-size: 14px; color: #a9afb6; display: inline-block; }
-.footer .links { position: absolute; right: 0; display: inline-block; list-style: none; }
+.footer .links { position: absolute; right: 0; display: inline-block; list-style: none; font-size: 0; top: 6px; }
 .footer .links .link { display: inline-block; }
+.footer .links .link:not(:last-of-type) { margin-right: 19px; }
+.footer .links .link a { display: block; }
+.footer .links .link a.twitter { width: 24px; height: 19px; background-image: url("../img/twitter.svg"); }
+.footer .links .link a.email { width: 22px; height: 18px; background-image: url("../img/email.svg"); }

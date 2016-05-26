@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="737px" height="420px" viewBox="0 0 737 420" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 3.8.2 (29753) - http://www.bohemiancoding.com/sketch -->
+    <title>228AD45C-9049-43A1-8A70-7A54317185D7</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <rect id="path-2" x="0" y="0" width="721" height="475" rx="6.75000027"></rect>
+        <mask id="mask-3" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="721" height="475" fill="white">
+            <use xlink:href="#path-2"></use>
+        </mask>
+        <linearGradient x1="100%" y1="1.11022302e-14%" x2="0%" y2="0%" id="linearGradient-4">
+            <stop stop-color="#0060FF" offset="0%"></stop>
+            <stop stop-color="#4DFFF6" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-5" x="0" y="0" width="721" height="51.953125" rx="6.75000027"></rect>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="721" height="51.953125" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-Large" transform="translate(-576.000000, -2601.000000)">
+            <g id="Panel-2" transform="translate(0.000000, 2347.000000)">
+                <g id="Conversion-Box-Copy" filter="url(#filter-1)" transform="translate(584.000000, 261.000000)">
+                    <use id="BG-Conversion" stroke="#CED3D8" mask="url(#mask-3)" stroke-width="1.35000005" fill="#FFFFFF" xlink:href="#path-2"></use>
+                    <rect id="Rectangle-25" fill="#F5F5F5" x="71.5599251" y="402.805398" width="610.284644" height="11.4701705"></rect>
+                    <g id="Background-Graph" transform="translate(71.559925, 91.761364)">
+                        <rect id="Rectangle-23" fill="#C5C5C5" opacity="0.181669776" x="0" y="0" width="87.1835206" height="295.525568"></rect>
+                        <rect id="Rectangle-23-Copy" fill="#C3C3C3" opacity="0.111124067" x="87.1835206" y="0" width="87.1835206" height="295.525568"></rect>
+                        <rect id="Rectangle-23-Copy-2" fill="#C5C5C5" opacity="0.181669776" x="174.367041" y="0" width="87.1835206" height="295.525568"></rect>
+                        <rect id="Rectangle-23-Copy-3" fill="#C3C3C3" opacity="0.111124067" x="261.550562" y="0" width="87.1835206" height="295.525568"></rect>
+                        <rect id="Rectangle-23-Copy-4" fill="#C5C5C5" opacity="0.181669776" x="348.734082" y="0" width="87.1835206" height="295.525568"></rect>
+                        <rect id="Rectangle-23-Copy-5" fill="#C3C3C3" opacity="0.111124067" x="435.917603" y="0" width="87.1835206" height="295.525568"></rect>
+                        <rect id="Rectangle-23-Copy-6" fill="#C5C5C5" opacity="0.181669776" x="523.101124" y="0" width="87.1835206" height="295.525568"></rect>
+                    </g>
+                    <g id="Axis-+-Grid" transform="translate(28.353933, 51.278409)">
+                        <g id="Y-Axis" transform="translate(0.000000, 31.036932)" font-size="15.5250006" font-family="HelveticaNeue, Helvetica Neue" fill="#9A9A9A" font-weight="normal">
+                            <text id="20">
+                                <tspan x="8.77621723" y="249.801136">20</tspan>
+                            </text>
+                            <text id="40">
+                                <tspan x="8.77621723" y="191.100852">40</tspan>
+                            </text>
+                            <text id="60">
+                                <tspan x="8.77621723" y="132.400568">60</tspan>
+                            </text>
+                            <text id="80">
+                                <tspan x="8.77621723" y="73.7002841">80</tspan>
+                            </text>
+                            <text id="100">
+                                <tspan x="0" y="15.6379439">100</tspan>
+                            </text>
+                            <text id="0">
+                                <tspan x="17.5524345" y="309.81408">0</tspan>
+                            </text>
+                        </g>
+                        <g id="Grid" transform="translate(27.003745, 0.000000)" stroke="#5AA5E1" stroke-width="1.35000005" stroke-linecap="square" opacity="0.156308302">
+                            <path d="M0.337546816,0.674715909 L609.948581,0.674715909" id="Line"></path>
+                            <path d="M16.539794,99.1832386 L626.150828,99.1832386" id="Line-Copy"></path>
+                            <path d="M16.539794,157.883523 L626.150828,157.883523" id="Line-Copy-3"></path>
+                            <path d="M16.539794,216.583807 L626.150828,216.583807" id="Line-Copy-2"></path>
+                            <path d="M16.539794,275.284091 L626.150828,275.284091" id="Line-Copy-5"></path>
+                            <path d="M16.539794,335.333807 L626.150828,335.333807" id="Line-Copy-4"></path>
+                        </g>
+                    </g>
+                    <g id="Graphs" transform="translate(106.664794, 179.474432)">
+                        <g id="Line-Graph">
+                            <polyline id="Path-7" stroke="url(#linearGradient-4)" stroke-width="4" stroke-linecap="round" stroke-dasharray="8.775000348687172" points="9.11736314 79.8655755 92.063019 80.7462526 182.733901 116.268703 271.541367 34.0507903 357.717034 8.64294942 444.378572 64.7414015 531.801571 18.605694"></polyline>
+                            <ellipse id="Oval-1" stroke="#4CFCF5" stroke-width="3" fill="#FFFFFF" cx="8.77621723" cy="80.2911932" rx="8.77621723" ry="8.77130682"></ellipse>
+                            <ellipse id="Oval-1-Copy" stroke="#43E9F7" stroke-width="3" fill="#FFFFFF" cx="91.8127341" cy="80.2911932" rx="8.77621723" ry="8.77130682"></ellipse>
+                            <ellipse id="Oval-1-Copy-2" stroke="#36CFF9" stroke-width="3" fill="#FFFFFF" cx="182.950375" cy="115.37642" rx="8.77621723" ry="8.77130682"></ellipse>
+                            <ellipse id="Oval-1-Copy-3" stroke="#28B2FA" stroke-width="3" fill="#FFFFFF" cx="271.38764" cy="33.7357955" rx="8.77621723" ry="8.77130682"></ellipse>
+                            <ellipse id="Oval-1-Copy-4" stroke="#1C9AFC" stroke-width="3" fill="#FFFFFF" cx="357.799625" cy="8.77130682" rx="8.77621723" ry="8.77130682"></ellipse>
+                            <ellipse id="Oval-1-Copy-5" stroke="#0E7DFD" stroke-width="3" fill="#FFFFFF" cx="444.21161" cy="64.0980114" rx="8.77621723" ry="8.77130682"></ellipse>
+                            <ellipse id="Oval-1-Copy-6" stroke="#0263FF" stroke-width="3" fill="#FFFFFF" cx="531.973783" cy="18.8920455" rx="8.77621723" ry="8.77130682"></ellipse>
+                        </g>
+                    </g>
+                    <g id="Head">
+                        <use id="Rectangle-4-Copy-5" stroke="#CED3D8" mask="url(#mask-6)" stroke-width="1.35000005" fill="#FFFFFF" xlink:href="#path-5"></use>
+                        <rect id="Rectangle-31" fill="#000000" opacity="0.04" x="439" y="12" width="251.809925" height="27.6633523" rx="4"></rect>
+                        <g id="ICON-Grid" opacity="0.676247668" transform="translate(20.927903, 16.193182)" fill="#000000" fill-opacity="0.08">
+                            <rect id="Rectangle-11" x="0.674041472" y="0.253018466" width="8.53039509" height="8.25060215"></rect>
+                            <rect id="Rectangle-11-Copy" x="0.674041472" y="10.9788013" width="8.53039509" height="8.25060215"></rect>
+                            <rect id="Rectangle-11-Copy-2" x="11.7635551" y="10.9788013" width="8.53039509" height="8.25060215"></rect>
+                            <rect id="Rectangle-11-Copy-3" x="11.7635551" y="0.253018466" width="8.53039509" height="8.25060215"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

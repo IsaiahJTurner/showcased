@@ -139,7 +139,6 @@
                         display: table-cell;
                         vertical-align: middle;
                         .title {
-                            font-size: 38px;
                             margin-bottom: 8px;
                         }
                         .description {
@@ -149,6 +148,47 @@
                 }
             }
         }
+    }
+    .cross-platform {
+      background: white;
+      height: 674px;
+      text-align: center;
+      padding-top: 85px;
+      .description {
+        margin: 13px auto 54px;
+        font-size: 20px;
+        color: #7e868f;
+        width: 421px;
+      }
+    }
+    .event-organizer {
+      color: white;
+      text-align: center;
+      background: black;
+      padding-top: 65px;
+      .description {
+        margin: 13px auto 54px;
+        font-size: 20px;
+        color: #c0c3c7;
+        width: 461px;
+      }
+      .graph {
+        margin: auto;
+        width: 721px;
+	      height: 400px;
+        background-size: contain;
+        background-position-y: bottom;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        background-image: url('../img/graph.svg');
+      }
+    }
+    .sign-up {
+      height: 412px;
+      text-align: center;
+      .title {
+        margin-top: 76px;
+      }
     }
 }
 /**
@@ -168,8 +208,26 @@
         right: 0;
         display: inline-block;
         list-style: none;
+        font-size: 0;
+        top: 6px;
         .link {
             display: inline-block;
+            &:not(:last-of-type) {
+              margin-right: 19px;
+            }
+            a {
+              display: block;
+              &.twitter {
+                width: 24px;
+	              height: 19px;
+                background-image: url('../img/twitter.svg');
+              }
+              &.email {
+                width: 22px;
+	              height: 18px;
+                background-image: url('../img/email.svg');
+              }
+            }
         }
     }
 }
