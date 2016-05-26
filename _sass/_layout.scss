@@ -231,3 +231,117 @@
         }
     }
 }
+
+.sweet-overlay {
+  opacity: 0.97!important;
+	background-color: #ffffff;
+}
+.sweet-alert {
+  border-radius: 10px;
+	box-shadow: 0 2px 34px 0 rgba(0, 0, 0, 0.08);
+	border: solid 1px #ced3d8;
+  width: 100%;
+  max-width: 608px;
+  margin-left: -322px;
+  color: $light-text-color;
+  h2 {
+    font-size: 30px;
+  	text-align: center;
+  	color: $text-color;
+    font-weight: 500;
+    margin-bottom: 33px;
+    margin-top: 52px;
+    line-height: inherit;
+  }
+  .checkbox {
+    margin-top: 12px;
+    text-align: left;
+    input {
+      opacity: 0;
+      height: 0;
+      width: 0;
+      margin: 0;
+      &:hover {
+        cursor: pointer;
+      }
+      + span {
+        width: 18px;
+      	height: 18px;
+      	border-radius: 4px;
+      	background-color: #ffffff;
+      	border: solid 2px #dee2e8;
+        display: block;
+        position: absolute;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &:checked + span {
+        &:before {
+          content: "";
+          position: absolute;
+          top: 1px;
+          left: 1px;
+          width: 16px;
+          height: 16px;
+          background: $brand-color;
+          border-radius: 2px;
+        }
+      }
+    }
+    .text {
+      margin-left: 30px;
+    }
+  }
+  form {
+    max-width: 320px;
+    margin: auto;
+    input {
+      display: block;
+      &[type="text"] {
+        margin: auto;
+        outline: none!important;
+        border-radius: 4px;
+      	-webkit-backdrop-filter: blur(10px);
+      	backdrop-filter: blur(10px);
+      	background-color: #ffffff;
+        font-size: 16px;
+        font-weight: 500;
+      	border: solid 2px #dee2e8;
+        width: 100%;
+        box-sizing: border-box;
+        height: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        box-shadow: none;
+        padding: 13px;
+        outline: none!important;
+      }
+    }
+  }
+  .sa-error-container {
+    margin-top: 22px;
+    background: white;
+    position: absolute;
+    width: 100%;
+    bottom: 35px;
+    transition: none!important;
+  }
+  .under {
+    width: 100%;
+    position: absolute;
+    bottom: -104px;
+  }
+  fieldset {
+    display: none;
+  }
+  .confirm {
+    margin-top: 22px;
+    width: 100%;
+    border-radius: 4px;
+	  background-color: $brand-color!important;
+    width: 320px;
+    margin-bottom: 64px;
+    padding: 14px;
+  }
+}

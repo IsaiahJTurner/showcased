@@ -12,6 +12,8 @@
   <meta name="author" content="Isaiah Turner">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/unslider/2.0.3/css/unslider.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+  
   <link rel="stylesheet" href="css/main.css">
 
   <link rel="canonical" href="http://showcased.com/">
@@ -33,7 +35,22 @@
       <div class="upper">
         <a class="logo" href="/"></a>
 
-        <button class="sign-up">Sign up</button>
+        <button class="sign-up" id="sign-up">Sign up</button>
+
+        <div id="modal-contents" class="hidden">
+          <form class="modal-form">
+            <input class="email" placeholder="Enter email address" type="text">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" class="organizer">
+                <span></span><span class="text">I'm an event organizer</span>
+              </label>
+            </div>
+          </form>
+          <div class="under">
+            Releasing Summer 2016
+          </div>
+        </div>
       </div>
       <div class="lower">
         <h1>Exchange your portfolio just by touching phones.</h1>
@@ -133,6 +150,7 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/unslider/2.0.3/js/unslider-min.js"></script>
     <script src="js/main.js"></script>
