@@ -204,11 +204,27 @@
     }
   }
   .sign-up {
-    height: 412px;
     text-align: center;
     .title {
       margin-top: 76px;
       margin-bottom: 23px;
+    }
+    .submit {
+      width: 320px;
+    	height: 48px;
+    	border-radius: 4px;
+    	background-color: #3f80ff;
+      font-size: 16px;
+    	color: #ffffff;
+      font-weight: bold;
+      border: none;
+      margin-top: 23px;
+      outline: none!important;
+      cursor: pointer;
+      margin-bottom: 124px;
+    }
+    .checkbox .text {
+      top: -2px;
     }
   }
 }
@@ -263,7 +279,6 @@
   width: 100%;
   max-width: 608px;
   margin-left: -322px;
-  color: $light-text-color;
   h2 {
     font-size: 30px;
     text-align: center;
@@ -281,11 +296,6 @@
     bottom: 35px;
     transition: none!important;
   }
-  .under {
-    width: 100%;
-    position: absolute;
-    bottom: -104px;
-  }
   fieldset {
     display: none;
   }
@@ -300,8 +310,11 @@
   }
 }
 .sign-up-form {
+  color: $light-text-color;
   max-width: 320px;
   margin: auto;
+  position: relative;
+  font-size: 14px;
   .checkbox {
     margin-top: 12px;
     text-align: left;
@@ -340,6 +353,8 @@
     }
     .text {
       margin-left: 30px;
+      top: 2px;
+      position: relative;
     }
   }
   input {
@@ -363,5 +378,11 @@
       padding: 13px;
       outline: none!important;
     }
+  }
+  .under {
+    width: 100%;
+    position: absolute;
+    bottom: -104px;
+    left: 0;
   }
 }
