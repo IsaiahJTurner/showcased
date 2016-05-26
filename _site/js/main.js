@@ -47,12 +47,15 @@ $(document).ready(function() {
 
     var $swal = swal({
       title: "Sign up now to reserve your spot",
-      text: $("#modal-contents").html(),
+      text: $("#sign-up-form").html(),
       showCancelButton: false,
       closeOnConfirm: false,
       confirmButtonText: "Sign Up",
       html: true
-    }, function(inputValue) {
+    }, function(submit) {
+      if (!submit) {
+        return;
+      }
       var email = $(".sweet-alert .email").val();
       var organizer = $(".sweet-alert .organizer").is(':checked');
       console.log(email, organizer);
@@ -60,8 +63,16 @@ $(document).ready(function() {
         swal.showInputError("You need to enter an email address!");
         return false;
       }
-      swal("Nice!", "You wrote: " + inputValue, "success");
+      swal({
+        title: "Thanks for signing up!",
+        text: 'We’ll get in touch with you as soon as we are ready!<button class="twitter" onclick="shareTwitter()"></button><button onclick="shareFacebook()"></button>',
+        type: "success",
+        showConfirmButton: false,
+        showCancelButton: false,
+        html: true
+      });
     });
+    $(".sweet-alert .email").focus();
     $(".sweet-overlay").click(function() {
       swal.close();
     });
@@ -97,6 +108,7 @@ $(document).ready(function() {
     $apps.append($imageSet);
     return $imageSet;
   }
+  addImageSet();
   addImageSet();
   setInterval(addImageSet, 1500 * 1000);
 
