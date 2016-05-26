@@ -57,8 +57,11 @@ a:hover { color: #131720; text-decoration: underline; }
 .content .share-work .wrap .right .table .table-cell { display: table-cell; vertical-align: middle; }
 .content .share-work .wrap .right .table .table-cell .title { margin-bottom: 8px; }
 .content .share-work .wrap .right .table .table-cell .description { color: #c0c3c7; }
-.content .cross-platform { background: white; height: 674px; text-align: center; padding-top: 85px; }
+.content .cross-platform { background: white; text-align: center; padding-top: 85px; }
 .content .cross-platform .description { margin: 13px auto 54px; font-size: 20px; color: #7e868f; width: 421px; }
+.content .cross-platform .phones { margin-bottom: 85px; }
+.content .cross-platform .phones .iphone { display: inline-block; height: 287.1px; width: 614.7px; background-size: contain; background-repeat: no-repeat; background-image: url("../img/iphone.svg"); }
+.content .cross-platform .phones .nexus { background-size: contain; display: inline-block; height: 287.1px; width: 614.7px; background-repeat: no-repeat; background-image: url("../img/nexus.svg"); background-size: 600px; background-position-y: -8px; }
 .content .event-organizer { color: white; text-align: center; background: black; padding-top: 65px; }
 .content .event-organizer .description { margin: 13px auto 54px; font-size: 20px; color: #c0c3c7; width: 461px; }
 .content .event-organizer .graph { margin: auto; width: 721px; height: 400px; background-size: contain; background-position-y: bottom; background-position-x: center; background-repeat: no-repeat; background-image: url("../img/graph.svg"); }

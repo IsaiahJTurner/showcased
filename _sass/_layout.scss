@@ -151,7 +151,6 @@
     }
     .cross-platform {
       background: white;
-      height: 674px;
       text-align: center;
       padding-top: 85px;
       .description {
@@ -159,6 +158,27 @@
         font-size: 20px;
         color: #7e868f;
         width: 421px;
+      }
+      .phones {
+        margin-bottom: 85px;
+        .iphone {
+          display: inline-block;
+          height: (319px * 0.9);
+        	width: (683px * 0.9);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-image: url('../img/iphone.svg');
+        }
+        .nexus {
+          background-size: contain;
+          display: inline-block;
+          height: (319px * 0.9);
+        	width: (683px * 0.9);
+          background-repeat: no-repeat;
+          background-image: url('../img/nexus.svg');
+          background-size: 600px;
+          background-position-y: -8px;
+        }
       }
     }
     .event-organizer {
