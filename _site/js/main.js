@@ -101,7 +101,11 @@ $(document).ready(function() {
       var version = window.devicePixelRatio > 1 ? "@" + window.devicePixelRatio + "x" : "";
       var event = "image-" + (imageCount++);
       var $image = $('<img data-original="img/cards/' + imageIds[i] + version + '.png" width="100" height="200" />');
-      if (isFirst) $image.lazyload();
+      if (isFirst) {
+        $image.lazyload();
+      } else {
+        $image.attr("src", $image.attr("data-original"));
+      }
       $imageSet.append($image);
     }
     isFirst = false;
