@@ -298,33 +298,36 @@
   border-top: 1px solid $grey-color-light;
   padding: 19px 0 20px;
   background: white;
-  .copyright {
-    font-size: 14px;
-    color: #a9afb6;
-    display: inline-block;
-  }
-  .links {
-    float: right;
-    display: inline-block;
-    list-style: none;
-    font-size: 0;
-    margin-top: 6px;
-    .link {
+  .wrapper {
+    padding: 0 20px;
+    .copyright {
+      font-size: 14px;
+      color: #a9afb6;
       display: inline-block;
-      &:not(:last-of-type) {
-        margin-right: 19px;
-      }
-      a {
-        display: block;
-        &.twitter {
-          width: 24px;
-          height: 19px;
-          background-image: url('../img/twitter.svg');
+    }
+    .links {
+      float: right;
+      display: inline-block;
+      list-style: none;
+      font-size: 0;
+      margin-top: 6px;
+      .link {
+        display: inline-block;
+        &:not(:last-of-type) {
+          margin-right: 19px;
         }
-        &.email {
-          width: 22px;
-          height: 18px;
-          background-image: url('../img/email.svg');
+        a {
+          display: block;
+          &.twitter {
+            width: 24px;
+            height: 19px;
+            background-image: url('../img/twitter.svg');
+          }
+          &.email {
+            width: 22px;
+            height: 18px;
+            background-image: url('../img/email.svg');
+          }
         }
       }
     }
