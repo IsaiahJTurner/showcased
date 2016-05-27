@@ -341,6 +341,9 @@
   width: 100%;
   max-width: 608px;
   margin-left: -322px;
+  @include media-query(540px) {
+    margin-left: -33px;
+  }
   h2 {
     font-size: 30px;
     text-align: center;
@@ -349,6 +352,7 @@
     margin-bottom: 33px;
     margin-top: 52px;
     line-height: inherit;
+    padding: 0 20px;
   }
   .sa-error-container {
     margin-top: 22px;
