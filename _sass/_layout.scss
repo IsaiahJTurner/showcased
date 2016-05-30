@@ -65,54 +65,84 @@
     position: relative;
     text-align: center;
     padding-bottom: 243px;
-    max-width: 832px;
-    height: 400px;
+    height: 500px;
     margin: auto;
+    top: 190px;
     .phone {
-      position: absolute;
+      position: relative;;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-position: center right;
+      background-size: contain!important;
+      transition: transform 0.13s ease-in;
+      .card-container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        box-sizing: border-box;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        transition: background 0.13s ease-in 0.3s;
+        .card {
+          height: 100%;
+          width: 100%;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          transition: margin 0.13s ease-in 0.3s;
+        }
+      }
+      &.animateIn {
+        .card-container {
+          background: #000;
+          .card {
+            margin: 0!important;
+          }
+        }
+      }
       &.iphone {
         left: 0;
-        display: inline-block;
         height: 321px;
         width: 651px;
-        background-repeat: no-repeat;
-        background-position: center right;
         @include background-image-retina("../img/demo/iPhone", png, 0, 0);
-        background-size: contain!important;
+        transform: rotate(-90deg) translateY(50px);
+        &.animateIn {
+          transform: rotate(-60deg) translateY(50px);
+        }
         .card-container {
-          width: 474px;
+          width: 476px;
           height: 268px;
-          position: relative;
           top: 25px;
           border-radius: 2px;
           left: 0px;
-          display: inline-block;
-          overflow: hidden;
-          transition: background 0.13s ease-in;
           .card {
-            transition: margin-left 0.13s ease-in;
-            height: 100%;
-            width: 100%;
-            margin-left: 100%;
-            background-position: center center;
-            background-repeat: no-repeat;
+            margin: 0 0 0 100%;
             background-image: url('../img/demo/nexus-card.svg');
-            background-size: contain;
-          }
-        }
-        &.animateIn {
-          .card-container {
-            background: #000;
-            padding: 10px;
-            box-sizing: border-box;
-            .card {
-              margin-left: 0;
-            }
           }
         }
       }
       &.nexus {
-
+        width: 647px;
+        height: 323px;
+        border-radius: 2px;
+        @include background-image-retina("../img/demo/Nexus", png, 0, 0);
+        transform: rotate(90deg) translateY(50px);
+        &.animateIn {
+          transform: rotate(60deg) translateY(50px);
+        }
+        .card-container {
+          width: 474px;
+          height: 268px;
+          top: 28px;
+          border-radius: 2px;
+          left: -10px;
+          .card {
+            margin: 0 0 0 -100%;
+            background-image: url('../img/demo/iphone-card.svg');
+          }
+        }
       }
     }
   }

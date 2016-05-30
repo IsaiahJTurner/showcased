@@ -33,7 +33,7 @@ jQuery.fn.extend({
 });
 $(document).ready(function() {
   $(".video").click(function() {
-    $(this).children(".phone.iphone").addClass("animateIn");
+    $(this).children(".phone.iphone, .phone.nexus").toggleClass("animateIn");
 
   });
   $('.slider').unslider({
