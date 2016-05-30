@@ -65,7 +65,7 @@
     position: relative;
     text-align: center;
     padding-bottom: 243px;
-    height: 600px;
+    height: 400px;
     margin: auto;
     top: 190px;
     .phone {
@@ -74,7 +74,7 @@
       background-repeat: no-repeat;
       background-position: center right;
       background-size: contain!important;
-      transition: transform 0.13s ease;
+      transition: transform 0.4s ease;
       .card-container {
         position: absolute;
         left: 0;
@@ -84,7 +84,7 @@
         position: relative;
         display: inline-block;
         overflow: hidden;
-        transition: background 0.2s ease 0.3s;
+        transition: background 0.2s ease 0.5s;
         background-color:rgba(0, 0, 0, 0);
         .card {
           height: 100%;
@@ -92,7 +92,7 @@
           background-position: center center;
           background-repeat: no-repeat;
           background-size: contain;
-          transition: margin 0.2s ease 0.3s;
+          transition: margin 0.s ease 0.5s;
         }
       }
       &.animateIn {
@@ -110,7 +110,7 @@
         @include background-image-retina("../img/demo/iPhone", png, 0, 0);
         transform: rotate(-90deg) translateY(100px);
         &.animateIn {
-          transform: rotate(-60deg) translateY(50px);
+          transform: rotate(0) translateY(0);
         }
         .card-container {
           width: 476px;
@@ -131,14 +131,14 @@
         @include background-image-retina("../img/demo/Nexus", png, 0, 0);
         transform: rotate(90deg) translateY(100px);
         &.animateIn {
-          transform: rotate(60deg) translateY(50px);
+          transform: rotate(0) translateY(0);
         }
         .card-container {
-          width: 474px;
+          width: 475px;
           height: 268px;
           top: 28px;
           border-radius: 2px;
-          left: -9px;
+          left: -10px;
           .card {
             margin: 0 0 0 -100%;
             background-image: url('../img/demo/iphone-card.svg');
