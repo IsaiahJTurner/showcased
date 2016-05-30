@@ -32,7 +32,10 @@ jQuery.fn.extend({
   }
 });
 $(document).ready(function() {
+  $(".video").click(function() {
+    $(this).children(".phone.iphone").addClass("animateIn");
 
+  });
   $('.slider').unslider({
     nav: false,
     keys: false,

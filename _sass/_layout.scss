@@ -68,6 +68,53 @@
     max-width: 832px;
     height: 400px;
     margin: auto;
+    .phone {
+      position: absolute;
+      &.iphone {
+        left: 0;
+        display: inline-block;
+        height: 321px;
+        width: 651px;
+        background-repeat: no-repeat;
+        background-position: center right;
+        @include background-image-retina("../img/demo/iPhone", png, 0, 0);
+        background-size: contain!important;
+        .card-container {
+          width: 474px;
+          height: 268px;
+          position: relative;
+          top: 25px;
+          border-radius: 2px;
+          left: 0px;
+          display: inline-block;
+          overflow: hidden;
+          transition: background 0.13s ease-in;
+          .card {
+            transition: margin-left 0.13s ease-in;
+            height: 100%;
+            width: 100%;
+            margin-left: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-image: url('../img/demo/iphone-card.svg');
+            background-size: contain;
+          }
+        }
+        &.animateIn {
+          .card-container {
+            background: #000;
+            padding: 10px;
+            box-sizing: border-box;
+            .card {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+      &.nexus {
+
+      }
+    }
   }
   .apps-overlay {
     position: absolute;
