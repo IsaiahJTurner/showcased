@@ -32,9 +32,13 @@ jQuery.fn.extend({
   }
 });
 $(document).ready(function() {
-  $(".video").click(function() {
-    $(this).children(".phone.iphone, .phone.nexus").toggleClass("animateIn");
-
+  var done = false;
+  $(this).scroll(function() {
+    if ($(this).scrollTop() >= 50) {
+      $(".video").children(".phone.iphone, .phone.nexus").addClass("animateIn");
+    } else {
+      $(".video").children(".phone.iphone, .phone.nexus").removeClass("animateIn");
+    }
   });
   $('.slider').unslider({
     nav: false,
