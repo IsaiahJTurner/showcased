@@ -17,6 +17,8 @@ url: "http://tryshowcase.com" # the base hostname & protocol for your site
 author: Isaiah Turner
 twitter_username: ShowcasedHQ
 github_username:  IsaiahJTurner
+firebase_app: showcase-1e2e6
 
 # Build settings
 markdown: kramdown
+exclude: ["node_modules/", "node_modules/", "Procfile", "package.json", "app.js", "Gemfile", "Gemfile.lock", "CNAME", "README.md", "config.js"]
