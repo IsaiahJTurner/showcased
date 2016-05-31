@@ -77,6 +77,9 @@ $(document).ready(function() {
           showCancelButton: false,
           html: true
         });
+        $(".sweet-overlay").click(function() {
+          swal.close();
+        });
         callback(false);
       },
       error: function(error) {
