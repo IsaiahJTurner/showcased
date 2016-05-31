@@ -31,13 +31,15 @@ app.get('/emails', function(req, res) {
     return res.send("Not authorized");
   }
   firebase.ref("submissions").once("value", function(snapshot) {
-    var csv = "";
+    var csv = "ID,Email Address,Event Organizer,Signup Date";
     snapshot.forEach(function(childSnapshot) {
       var key = childSnapshot.key;
       // childData will be the actual contents of the child
       var submission = childSnapshot.val();
       csv += (key || "") + "," + (submission.email || "") + "," + Boolean(submission.isEventOrganizer) + "," + (submission.createdAt || "") + "\n";
     });
+    res.setHeader('Content-Type', "text/csv");
+    // res.setHeader("Content-Disposition", "attachment;filename=emails.csv")
     res.send(csv);
   });
 });

@@ -34,7 +34,7 @@ jQuery.fn.extend({
 $(document).ready(function() {
   var done = false;
   $(this).scroll(function() {
-    if ($(this).scrollTop() >=60) {
+    if ($(this).scrollTop() >= 60) {
       $(".video").children(".phone.iphone, .phone.nexus").addClass("animateIn");
     } else {
       $(".video").children(".phone.iphone, .phone.nexus").removeClass("animateIn");
@@ -64,19 +64,32 @@ $(document).ready(function() {
         return;
       }
       var email = $(".sweet-alert .email").val();
-      var organizer = $(".sweet-alert .organizer").is(':checked');
-      console.log(email, organizer);
+      var isEventOrganizer = $(".sweet-alert .organizer").is(':checked');
       if (email.length < 6) {
         swal.showInputError("You need to enter an email address!");
         return false;
       }
-      swal({
-        title: "Thanks for signing up!",
-        text: 'We’ll get in touch with you as soon as we are ready!<button class="twitter" onclick="shareTwitter()"></button><button onclick="shareFacebook()"></button>',
-        type: "success",
-        showConfirmButton: false,
-        showCancelButton: false,
-        html: true
+      $.ajax({
+        url: firebaseDatabseURL + "/submissions.json",
+        type: "POST",
+        data: JSON.stringify({
+          email: email,
+          isEventOrganizer: isEventOrganizer,
+          createdAt: Date.now()
+        }),
+        success: function() {
+          swal({
+            title: "Thanks for signing up!",
+            text: 'We’ll get in touch with you as soon as we are ready!<button class="twitter" onclick="shareTwitter()"></button><button onclick="shareFacebook()"></button>',
+            type: "success",
+            showConfirmButton: false,
+            showCancelButton: false,
+            html: true
+          });
+        },
+        error: function(error) {
+          swal.showInputError("Submit failed");
+        }
       });
     });
     $(".sweet-alert .email").focus();
