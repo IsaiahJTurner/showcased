@@ -49,6 +49,54 @@ $(document).ready(function() {
     arrows: false,
     infinite: true
   });
+  $("#sign-up-form").submit(function() {
+    $("#sign-up-footer").click();
+  });
+  var validateForm = function(email, isEventOrganizer) {
+    if (email.length < 6) {
+      swal.showInputError("You need to enter an email address!");
+      return false;
+    }
+    return true;
+  };
+  var submitForm = function(email, isEventOrganizer, callback) {
+    $.ajax({
+      url: firebaseDatabseURL + "/submissions.json",
+      type: "POST",
+      data: JSON.stringify({
+        email: email,
+        isEventOrganizer: isEventOrganizer,
+        createdAt: Date.now()
+      }),
+      success: function() {
+        swal({
+          title: "Thanks for signing up!",
+          text: 'We’ll get in touch with you as soon as we are ready!<button class="twitter" onclick="shareTwitter()"></button><button onclick="shareFacebook()"></button>',
+          type: "success",
+          showConfirmButton: false,
+          showCancelButton: false,
+          html: true
+        });
+        callback(false);
+      },
+      error: function(error) {
+        callback(true);
+        swal.showInputError("Submit failed");
+      }
+    });
+  }
+  $("#sign-up-footer").click(function() {
+    var email = $("#sign-up-form .email").val();
+    var isEventOrganizer = $("#sign-up-form .organizer").is(':checked');
+    if (!validateForm(email, isEventOrganizer)) {
+      return $("#sign-up").click();
+    }
+    submitForm(email, isEventOrganizer, function(error) {
+      if (error) {
+        $("#sign-up").click();
+      }
+    });
+  });
   $("#sign-up").click(function() {
     /*jshint multistr: true */
 
@@ -65,32 +113,10 @@ $(document).ready(function() {
       }
       var email = $(".sweet-alert .email").val();
       var isEventOrganizer = $(".sweet-alert .organizer").is(':checked');
-      if (email.length < 6) {
-        swal.showInputError("You need to enter an email address!");
-        return false;
-      }
-      $.ajax({
-        url: firebaseDatabseURL + "/submissions.json",
-        type: "POST",
-        data: JSON.stringify({
-          email: email,
-          isEventOrganizer: isEventOrganizer,
-          createdAt: Date.now()
-        }),
-        success: function() {
-          swal({
-            title: "Thanks for signing up!",
-            text: 'We’ll get in touch with you as soon as we are ready!<button class="twitter" onclick="shareTwitter()"></button><button onclick="shareFacebook()"></button>',
-            type: "success",
-            showConfirmButton: false,
-            showCancelButton: false,
-            html: true
-          });
-        },
-        error: function(error) {
-          swal.showInputError("Submit failed");
-        }
-      });
+      if (!validateForm(email, isEventOrganizer)) {
+        return;
+      };
+      submitForm(email, isEventOrganizer);
     });
     $(".sweet-alert .email").focus();
     $(".sweet-overlay").click(function() {

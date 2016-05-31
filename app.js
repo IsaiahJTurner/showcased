@@ -39,7 +39,7 @@ app.get('/emails', function(req, res) {
       csv += (key || "") + "," + (submission.email || "") + "," + Boolean(submission.isEventOrganizer) + "," + (submission.createdAt || "") + "\n";
     });
     res.setHeader('Content-Type', "text/csv");
-    // res.setHeader("Content-Disposition", "attachment;filename=emails.csv")
+    res.setHeader("Content-Disposition", "inline;filename=emails.csv")
     res.send(csv);
   });
 });
