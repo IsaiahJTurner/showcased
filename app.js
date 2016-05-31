@@ -4,6 +4,10 @@ try {
   // config file not found (this is for those who don't want to define environment variables, set process.env in a config file)
 }
 
+if (!process.env.FIREBASE_SERVICE_ACCOUNT || !process.env.PASSWORD) {
+  return console.log("set FIREBASE_SERVICE_ACCOUNT and PASSWORD");
+}
+
 var express = require('express');
 var Firebase = require("firebase");
 var yaml = require('js-yaml');
