@@ -1,128 +1,558 @@
-/** Reset some basic elements */
-.container h1, .container h2, .container h3, .container h4, .container h5, .container h6, .container p, .container blockquote, .container pre, .container hr, .container dl, .container dd, .container ol, .container ul, .container li, .container figure { margin: 0; padding: 0; line-height: normal; }
+/**
+ * Reset some basic elements
+ */
+.container h1, .container h2, .container h3, .container h4, .container h5, .container h6,
+.container p, .container blockquote, .container pre, .container hr,
+.container dl, .container dd, .container ol, .container ul, .container li, .container figure {
+  margin: 0;
+  padding: 0;
+  line-height: normal; }
 
-/** Basic styling */
-body { margin: 0; padding: 0; font: normal 20px/28px "SFUIText-Regular", "Helvetica Neue", "Roboto", Helvetica, Arial, sans-serif; color: #131720; background: black; -webkit-text-size-adjust: 100%; }
-body .container { background-color: #f4f7f9; }
+/**
+ * Basic styling
+ */
+body {
+  margin: 0;
+  padding: 0;
+  font: normal 20px/28px "SFUIText-Regular", "Helvetica Neue", "Roboto", Helvetica, Arial, sans-serif;
+  color: #131720;
+  background: black;
+  -webkit-text-size-adjust: 100%; }
+  body .container {
+    background-color: #f4f7f9; }
 
-.hidden { display: none; }
+.hidden {
+  display: none; }
 
-/** Set `margin-bottom` to maintain vertical rhythm */
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure { margin-bottom: 0; }
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure {
+  margin-bottom: 0; }
 
-/** Images */
-img { max-width: 100%; }
+/**
+ * Images
+ */
+img {
+  max-width: 100%; }
 
-/** Headings */
-h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
 
-h2 { font-size: 38px; }
+h2 {
+  font-size: 38px; }
 
-h3 { font-size: 34px; }
+h3 {
+  font-size: 34px; }
 
-/** Links */
-a { color: #3f80ff; text-decoration: none; }
-a:hover { color: #131720; text-decoration: underline; }
+/**
+ * Links
+ */
+a {
+  color: #3f80ff;
+  text-decoration: none; }
+  a:hover {
+    color: #131720;
+    text-decoration: underline; }
 
-/** Wrapper */
-.wrapper { max-width: 1318px; margin-right: auto; margin-left: auto; position: relative; padding-right: 10px; padding-left: 10px; }
-@media screen and (max-width: 800px) { .wrapper { padding-right: 20px; padding-left: 20px; } }
+/**
+ * Wrapper
+ */
+.wrapper {
+  max-width: 1318px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px; }
+  @media screen and (max-width: 800px) {
+    .wrapper {
+      padding-right: 20px;
+      padding-left: 20px; } }
 
-/** Clearfix */
-.wrapper:after { content: ""; display: table; clear: both; }
+/**
+ * Clearfix
+ */
+.wrapper:after {
+  content: "";
+  display: table;
+  clear: both; }
 
-/** Site header */
-.banner { position: relative; overflow: hidden; }
-.banner .header { border-top: 38px solid black; background-image: linear-gradient(to bottom, #000000, transparent); z-index: 2; position: relative; }
-.banner .header .wrapper { height: 182px; }
-.banner .header .upper { position: relative; }
-.banner .header .upper .logo { width: 158px; height: 17px; background-image: url("../img/logo.svg"); display: inline-block; position: absolute; top: -3px; left: 0; background-repeat: no-repeat; }
-.banner .header .upper .sign-up { top: -10px; position: absolute; right: 0; width: 106px; height: 42px; border-radius: 8px; border: solid 2px rgba(255, 255, 255, 0.5); font-size: 18px; color: #ffffff; outline: none !important; background: none !important; cursor: pointer !important; }
-.banner .header .upper .sign-up:active { box-shadow: inset 0 0 10px black; }
-.banner .header .lower { position: absolute; bottom: 0; width: 100%; left: 0; padding: 0 20px; box-sizing: border-box; }
-.banner .header .lower h1 { font-size: 30px; text-align: center; color: #ffffff; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); font-weight: 500; }
-.banner .video { padding: 26px 10px 0; z-index: 2; position: relative; text-align: center; padding-bottom: 243px; height: 500px; margin: auto; font-size: 0; top: 190px; }
-.banner .video .phone { position: relative; display: inline-block; background-repeat: no-repeat; background-position: center right; background-size: contain !important; transition: transform 0.4s ease; }
-.banner .video .phone .card-container { position: absolute; left: 0; right: 0; padding: 10px; box-sizing: border-box; position: relative; display: inline-block; overflow: hidden; transition: background 0.2s ease 0.5s; background-color: transparent; }
-.banner .video .phone .card-container .card { height: 100%; width: 100%; background-position: center center; background-repeat: no-repeat; background-size: contain; transition: margin 0.2s ease 0.5s; }
-.banner .video .phone.animateIn .card-container { background-color: black; }
-.banner .video .phone.animateIn .card-container .card { margin: 0 !important; }
-.banner .video .phone.iphone { left: 0; height: 321px; width: 651px; background-image: url("../img/demo/iPhone.png"); transform: rotate(-90deg) translateY(100px); }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) { .banner .video .phone.iphone { background-image: url("../img/demo/iPhone@2x.png"); -webkit-background-size: 0 0; -moz-background-size: 0 0; -o-background-size: 0 0; background-size: 0 0; } }
-.banner .video .phone.iphone.animateIn { transform: rotate(0) translateY(0); }
-.banner .video .phone.iphone .card-container { width: 477px; height: 268px; top: 25px; border-radius: 2px; left: 0px; }
-.banner .video .phone.iphone .card-container .card { margin: 0 0 0 100%; background-image: url("../img/demo/nexus-card.svg"); }
-.banner .video .phone.nexus { width: 647px; height: 323px; border-radius: 2px; background-image: url("../img/demo/Nexus.png"); transform: rotate(90deg) translateY(100px); }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) { .banner .video .phone.nexus { background-image: url("../img/demo/Nexus@2x.png"); -webkit-background-size: 0 0; -moz-background-size: 0 0; -o-background-size: 0 0; background-size: 0 0; } }
-.banner .video .phone.nexus.animateIn { transform: rotate(0) translateY(0); }
-.banner .video .phone.nexus .card-container { width: 475px; height: 268px; top: 28px; border-radius: 2px; left: -10px; }
-.banner .video .phone.nexus .card-container .card { margin: 0 0 0 -100%; background-image: url("../img/demo/iphone-card.svg"); }
-.banner .apps-overlay { position: absolute; background: rgba(0, 0, 0, 0.5); z-index: 1; height: 100%; width: 100%; top: 0; }
-.banner .apps-overlay .bottom-shadow { position: absolute; bottom: 0; width: 100%; height: 146px; background: linear-gradient(to top, #000000, transparent); }
-.banner .apps { line-height: 0; font-size: 0; background: black; z-index: 0; position: absolute; top: 0; text-align: center; }
-.banner .apps img { width: 258px; height: 146.86px; padding: 5px; }
-@media screen and (max-width: 535px) { .banner .apps img { width: 129px; height: 73.43px; } }
+/**
+ * Site header
+ */
+.banner {
+  position: relative;
+  overflow: hidden; }
+  .banner .header {
+    border-top: 38px solid black;
+    background-image: linear-gradient(to bottom, #000000, transparent);
+    z-index: 2;
+    position: relative; }
+    .banner .header .wrapper {
+      height: 182px; }
+    .banner .header .upper {
+      position: relative; }
+      .banner .header .upper .logo {
+        width: 158px;
+        height: 17px;
+        background-image: url("../img/logo.svg");
+        display: inline-block;
+        position: absolute;
+        top: -3px;
+        left: 0;
+        background-repeat: no-repeat; }
+      .banner .header .upper .sign-up {
+        top: -10px;
+        position: absolute;
+        right: 0;
+        width: 106px;
+        height: 42px;
+        border-radius: 8px;
+        border: solid 2px rgba(255, 255, 255, 0.5);
+        font-size: 18px;
+        color: #ffffff;
+        outline: none !important;
+        background: none !important;
+        cursor: pointer !important; }
+        .banner .header .upper .sign-up:active {
+          box-shadow: inset 0 0 10px black; }
+    .banner .header .lower {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      padding: 0 20px;
+      box-sizing: border-box; }
+      .banner .header .lower h1 {
+        font-size: 30px;
+        text-align: center;
+        color: #ffffff;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        font-weight: 500; }
+  .banner .video {
+    padding: 26px 10px 0;
+    z-index: 2;
+    position: relative;
+    text-align: center;
+    padding-bottom: 243px;
+    height: 500px;
+    margin: auto;
+    font-size: 0;
+    top: 190px; }
+    .banner .video .phone {
+      position: relative;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-position: center right;
+      background-size: contain !important;
+      transition: transform 0.4s ease; }
+      .banner .video .phone .card-container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        box-sizing: border-box;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        transition: background 0.2s ease 0.5s;
+        background-color: transparent; }
+        .banner .video .phone .card-container .card {
+          height: 100%;
+          width: 100%;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          transition: margin 0.2s ease 0.5s; }
+      .banner .video .phone.animateIn .card-container {
+        background-color: black; }
+        .banner .video .phone.animateIn .card-container .card {
+          margin: 0 !important; }
+      .banner .video .phone.iphone {
+        left: 0;
+        height: 321px;
+        width: 651px;
+        background-image: url("../img/demo/iPhone.png");
+        transform: rotate(-90deg) translateY(100px); }
+        @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+          .banner .video .phone.iphone {
+            background-image: url("../img/demo/iPhone@2x.png");
+            -webkit-background-size: 0 0;
+            -moz-background-size: 0 0;
+            -o-background-size: 0 0;
+            background-size: 0 0; } }
+        .banner .video .phone.iphone.animateIn {
+          transform: rotate(0) translateY(0); }
+        .banner .video .phone.iphone .card-container {
+          width: 477px;
+          height: 268px;
+          top: 25px;
+          border-radius: 2px;
+          left: 0px; }
+          .banner .video .phone.iphone .card-container .card {
+            margin: 0 0 0 100%;
+            background-image: url("../img/demo/nexus-card.svg"); }
+      .banner .video .phone.nexus {
+        width: 647px;
+        height: 323px;
+        border-radius: 2px;
+        background-image: url("../img/demo/Nexus.png");
+        transform: rotate(90deg) translateY(100px); }
+        @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+          .banner .video .phone.nexus {
+            background-image: url("../img/demo/Nexus@2x.png");
+            -webkit-background-size: 0 0;
+            -moz-background-size: 0 0;
+            -o-background-size: 0 0;
+            background-size: 0 0; } }
+        .banner .video .phone.nexus.animateIn {
+          transform: rotate(0) translateY(0); }
+        .banner .video .phone.nexus .card-container {
+          width: 475px;
+          height: 268px;
+          top: 28px;
+          border-radius: 2px;
+          left: -10px; }
+          .banner .video .phone.nexus .card-container .card {
+            margin: 0 0 0 -100%;
+            background-image: url("../img/demo/iphone-card.svg"); }
+  .banner .apps-overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    top: 0; }
+    .banner .apps-overlay .bottom-shadow {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 146px;
+      background: linear-gradient(to top, #000000, transparent); }
+  .banner .apps {
+    line-height: 0;
+    font-size: 0;
+    background: black;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    text-align: center; }
+    .banner .apps img {
+      width: 258px;
+      height: 146.86px;
+      padding: 5px; }
+      @media screen and (max-width: 535px) {
+        .banner .apps img {
+          width: 129px;
+          height: 73.43px; } }
 
-.content .share-work { position: relative; background-color: #000000; box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.1); }
-.content .share-work .wrap { max-width: 987px; margin: auto; position: relative; }
-@media screen and (max-width: 1023px) { .content .share-work .wrap { text-align: center; } }
-.content .share-work .wrap .phone { vertical-align: bottom; position: relative; display: inline-block; margin-top: 56px; width: 481px; height: 616px; background-image: url("../img/portfolio.png"); background-size: contain !important; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) { .content .share-work .wrap .phone { background-image: url("../img/portfolio@2x.png"); -webkit-background-size: 481px 616px; -moz-background-size: 481px 616px; -o-background-size: 481px 616px; background-size: 481px 616px; } }
-@media screen and (max-width: 1023px) { .content .share-work .wrap .phone { margin: auto; } }
-.content .share-work .wrap .phone .slider { width: calc(100% - 44px); margin: 89px auto auto; background: black; }
-.content .share-work .wrap .phone .slider ul li div { width: 437px; height: 299px; background-size: cover; border-radius: 4px; }
-@media screen and (max-width: 500px) { .content .share-work .wrap .phone { width: 240.5px; height: 308px; }
-  .content .share-work .wrap .phone .slider { width: calc(100% - 22px); margin-top: 44px; }
-  .content .share-work .wrap .phone .slider ul li div { width: 218.5px; height: 149.5px; } }
-.content .share-work .wrap .right { text-align: left; color: white; display: inline-block; max-width: 498px; position: absolute; right: 0; height: 100%; padding-left: 50px; }
-@media screen and (max-width: 1023px) { .content .share-work .wrap .right { display: block; position: relative; margin: auto; text-align: center; margin-bottom: 30px; padding: 20px; } }
-.content .share-work .wrap .right .table { height: 100%; display: table; }
-.content .share-work .wrap .right .table .table-cell { display: table-cell; vertical-align: middle; }
-.content .share-work .wrap .right .table .table-cell .title { margin-bottom: 8px; }
-.content .share-work .wrap .right .table .table-cell .description { color: #c0c3c7; }
-.content .cross-platform { background: white; text-align: center; padding-top: 85px; }
-.content .cross-platform .description { margin: 13px auto 54px; font-size: 20px; color: #7e868f; max-width: 421px; }
-.content .cross-platform .phones { margin: 0 auto 85px; height: 287px; max-width: 1140px; background-repeat: no-repeat; font-size: 0; position: relative; padding: 0 10px; }
-.content .cross-platform .phones .iphone { position: absolute; left: 0; display: inline-block; height: 280px; width: calc(50% - 5px); background-size: contain; background-repeat: no-repeat; background-position: center right; background-image: url("../img/iphone.svg"); }
-.content .cross-platform .phones .nexus { position: absolute; right: 0; background-size: contain; display: inline-block; height: 280px; width: calc(50% - 5px); background-image: url("../img/nexus.svg"); background-size: contain; background-position: center left; background-repeat: no-repeat; }
-@media screen and (max-width: 500px) { .content .cross-platform .phones { height: initial; }
-  .content .cross-platform .phones .iphone, .content .cross-platform .phones .nexus { width: 100%; display: block; position: relative; height: 220px; } }
-.content .event-organizer { color: white; text-align: center; background: black; padding-top: 65px; }
-.content .event-organizer .description { margin: 13px auto 54px; font-size: 20px; color: #c0c3c7; max-width: 461px; }
-.content .event-organizer .graph { margin: auto; width: 100%; max-width: 721px; height: calc(100vw - 275px); max-height: 335px; min-height: 200px; background-size: contain; background-position-y: bottom; background-position-x: center; background-repeat: no-repeat; background-image: url("../img/graph.svg"); }
-.content .sign-up { text-align: center; }
-.content .sign-up .title { margin-top: 76px; margin-bottom: 23px; }
-.content .sign-up .submit { width: 320px; height: 48px; border-radius: 4px; background-color: #3f80ff; font-size: 16px; color: #ffffff; font-weight: bold; border: none; margin-top: 23px; outline: none !important; cursor: pointer; margin-bottom: 124px; }
-.content .sign-up .checkbox .text { top: -2px; }
+.content .share-work {
+  position: relative;
+  background-color: #000000;
+  box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.1); }
+  .content .share-work .wrap {
+    max-width: 987px;
+    margin: auto;
+    position: relative; }
+    @media screen and (max-width: 1023px) {
+      .content .share-work .wrap {
+        text-align: center; } }
+    .content .share-work .wrap .phone {
+      vertical-align: bottom;
+      position: relative;
+      display: inline-block;
+      margin-top: 56px;
+      width: 481px;
+      height: 616px;
+      background-image: url("../img/portfolio.png");
+      background-size: contain !important; }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .content .share-work .wrap .phone {
+          background-image: url("../img/portfolio@2x.png");
+          -webkit-background-size: 481px 616px;
+          -moz-background-size: 481px 616px;
+          -o-background-size: 481px 616px;
+          background-size: 481px 616px; } }
+      @media screen and (max-width: 1023px) {
+        .content .share-work .wrap .phone {
+          margin: auto; } }
+      .content .share-work .wrap .phone .slider {
+        width: calc(100% - 44px);
+        margin: 89px auto auto;
+        background: black; }
+        .content .share-work .wrap .phone .slider ul li div {
+          width: 437px;
+          height: 299px;
+          background-size: cover;
+          border-radius: 4px; }
+      @media screen and (max-width: 500px) {
+        .content .share-work .wrap .phone {
+          width: 240.5px;
+          height: 308px; }
+          .content .share-work .wrap .phone .slider {
+            width: calc(100% - 22px);
+            margin-top: 44px; }
+            .content .share-work .wrap .phone .slider ul li div {
+              width: 218.5px;
+              height: 149.5px; } }
+    .content .share-work .wrap .right {
+      text-align: left;
+      color: white;
+      display: inline-block;
+      max-width: 498px;
+      position: absolute;
+      right: 0;
+      height: 100%;
+      padding-left: 50px; }
+      @media screen and (max-width: 1023px) {
+        .content .share-work .wrap .right {
+          display: block;
+          position: relative;
+          margin: auto;
+          text-align: center;
+          margin-bottom: 30px;
+          padding: 20px; } }
+      .content .share-work .wrap .right .table {
+        height: 100%;
+        display: table; }
+        .content .share-work .wrap .right .table .table-cell {
+          display: table-cell;
+          vertical-align: middle; }
+          .content .share-work .wrap .right .table .table-cell .title {
+            margin-bottom: 8px; }
+          .content .share-work .wrap .right .table .table-cell .description {
+            color: #c0c3c7; }
+.content .cross-platform {
+  background: white;
+  text-align: center;
+  padding-top: 85px; }
+  .content .cross-platform .description {
+    margin: 13px auto 54px;
+    font-size: 20px;
+    color: #7e868f;
+    max-width: 421px; }
+  .content .cross-platform .phones {
+    margin: 0 auto 85px;
+    height: 287px;
+    max-width: 1140px;
+    background-repeat: no-repeat;
+    font-size: 0;
+    position: relative;
+    padding: 0 10px; }
+    .content .cross-platform .phones .iphone {
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      height: 280px;
+      width: calc(50% - 5px);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center right;
+      background-image: url("../img/iphone.svg"); }
+    .content .cross-platform .phones .nexus {
+      position: absolute;
+      right: 0;
+      background-size: contain;
+      display: inline-block;
+      height: 280px;
+      width: calc(50% - 5px);
+      background-image: url("../img/nexus.svg");
+      background-size: contain;
+      background-position: center left;
+      background-repeat: no-repeat; }
+    @media screen and (max-width: 500px) {
+      .content .cross-platform .phones {
+        height: initial; }
+        .content .cross-platform .phones .iphone, .content .cross-platform .phones .nexus {
+          width: 100%;
+          display: block;
+          position: relative;
+          height: 220px; } }
+.content .event-organizer {
+  color: white;
+  text-align: center;
+  background: black;
+  padding-top: 65px; }
+  .content .event-organizer .description {
+    margin: 13px auto 54px;
+    font-size: 20px;
+    color: #c0c3c7;
+    max-width: 461px; }
+  .content .event-organizer .graph {
+    margin: auto;
+    width: 100%;
+    max-width: 721px;
+    height: calc(100vw - 275px);
+    max-height: 335px;
+    min-height: 200px;
+    background-size: contain;
+    background-position-y: bottom;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/graph.svg"); }
+.content .sign-up {
+  text-align: center; }
+  .content .sign-up .title {
+    margin-top: 76px;
+    margin-bottom: 23px; }
+  .content .sign-up .submit {
+    width: 320px;
+    height: 48px;
+    border-radius: 4px;
+    background-color: #3f80ff;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    margin-top: 23px;
+    outline: none !important;
+    cursor: pointer;
+    margin-bottom: 124px; }
+  .content .sign-up .checkbox .text {
+    top: -2px; }
 
-/** Site footer */
-.footer { border-top: 1px solid #e8e8e8; padding: 19px 0 20px; background: white; }
-.footer .wrapper { padding: 0 20px; }
-.footer .wrapper .copyright { font-size: 14px; color: #a9afb6; display: inline-block; }
-.footer .wrapper .links { float: right; display: inline-block; list-style: none; font-size: 0; margin-top: 6px; }
-.footer .wrapper .links .link { display: inline-block; }
-.footer .wrapper .links .link:not(:last-of-type) { margin-right: 19px; }
-.footer .wrapper .links .link a { display: block; }
-.footer .wrapper .links .link a.twitter { width: 24px; height: 19px; background-image: url("../img/twitter.svg"); }
-.footer .wrapper .links .link a.email { width: 22px; height: 18px; background-image: url("../img/email.svg"); }
+/**
+ * Site footer
+ */
+.footer {
+  border-top: 1px solid #e8e8e8;
+  padding: 19px 0 20px;
+  background: white; }
+  .footer .wrapper {
+    padding: 0 20px; }
+    .footer .wrapper .copyright {
+      font-size: 14px;
+      color: #a9afb6;
+      display: inline-block; }
+    .footer .wrapper .links {
+      float: right;
+      display: inline-block;
+      list-style: none;
+      font-size: 0;
+      margin-top: 6px; }
+      .footer .wrapper .links .link {
+        display: inline-block; }
+        .footer .wrapper .links .link:not(:last-of-type) {
+          margin-right: 19px; }
+        .footer .wrapper .links .link a {
+          display: block; }
+          .footer .wrapper .links .link a.twitter {
+            width: 24px;
+            height: 19px;
+            background-image: url("../img/twitter.svg"); }
+          .footer .wrapper .links .link a.email {
+            width: 22px;
+            height: 18px;
+            background-image: url("../img/email.svg"); }
 
-.sweet-overlay { opacity: 0.97 !important; background-color: #ffffff; }
+.sweet-overlay {
+  opacity: 0.97 !important;
+  background-color: #ffffff; }
 
-.sweet-alert { border-radius: 10px; box-shadow: 0 2px 34px 0 rgba(0, 0, 0, 0.08); border: solid 1px #ced3d8; width: 100%; max-width: 608px; margin-left: -322px; }
-@media screen and (max-width: 540px) { .sweet-alert { margin-left: -33px; } }
-.sweet-alert h2 { font-size: 30px; text-align: center; color: #131720; font-weight: 500; margin-bottom: 33px; margin-top: 52px; line-height: inherit; padding: 0 20px; }
-.sweet-alert .sa-error-container { margin-top: 22px; background: white; position: absolute; width: 100%; bottom: 35px; transition: none !important; }
-.sweet-alert fieldset { display: none; }
-.sweet-alert .confirm { margin-top: 22px; width: 100%; border-radius: 4px; background-color: #3f80ff !important; width: 320px; margin-bottom: 64px; padding: 14px; }
+.sweet-alert {
+  border-radius: 10px;
+  box-shadow: 0 2px 34px 0 rgba(0, 0, 0, 0.08);
+  border: solid 1px #ced3d8;
+  width: 100%;
+  max-width: 608px;
+  margin-left: -322px; }
+  @media screen and (max-width: 540px) {
+    .sweet-alert {
+      margin-left: -33px; } }
+  .sweet-alert h2 {
+    font-size: 30px;
+    text-align: center;
+    color: #131720;
+    font-weight: 500;
+    margin-bottom: 33px;
+    margin-top: 52px;
+    line-height: inherit;
+    padding: 0 20px; }
+  .sweet-alert .sa-error-container {
+    margin-top: 22px;
+    background: white;
+    position: absolute;
+    width: 100%;
+    bottom: 35px;
+    transition: none !important; }
+  .sweet-alert fieldset {
+    display: none; }
+  .sweet-alert .confirm {
+    margin-top: 22px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #3f80ff !important;
+    width: 320px;
+    margin-bottom: 64px;
+    padding: 14px; }
 
-.sign-up-form { color: #7e868f; max-width: 320px; margin: auto; position: relative; font-size: 14px; }
-.sign-up-form .checkbox { margin-top: 12px; text-align: left; }
-.sign-up-form .checkbox input { opacity: 0; height: 0; width: 0; margin: 0; }
-.sign-up-form .checkbox input:hover { cursor: pointer; }
-.sign-up-form .checkbox input + span { width: 18px; height: 18px; border-radius: 4px; background-color: #ffffff; border: solid 2px #dee2e8; display: block; position: absolute; }
-.sign-up-form .checkbox input + span:hover { cursor: pointer; }
-.sign-up-form .checkbox input:checked + span:before { content: ""; position: absolute; top: 1px; left: 1px; width: 16px; height: 16px; background: #3f80ff; border-radius: 2px; }
-.sign-up-form .checkbox .text { margin-left: 30px; top: 2px; position: relative; }
-.sign-up-form input { display: block; }
-.sign-up-form input[type="text"] { margin: auto; outline: none !important; border-radius: 4px; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); background-color: #ffffff; font-size: 16px; font-weight: 500; border: solid 2px #dee2e8; width: 100%; box-sizing: border-box; height: auto; margin-top: 0; margin-bottom: 0; box-shadow: none; padding: 13px; outline: none !important; }
-.sign-up-form .under { width: 100%; position: absolute; bottom: -104px; left: 0; }
+.sign-up-form {
+  color: #7e868f;
+  max-width: 320px;
+  margin: auto;
+  position: relative;
+  font-size: 14px; }
+  .sign-up-form .checkbox {
+    margin-top: 12px;
+    text-align: left; }
+    .sign-up-form .checkbox input {
+      opacity: 0;
+      height: 0;
+      width: 0;
+      margin: 0; }
+      .sign-up-form .checkbox input:hover {
+        cursor: pointer; }
+      .sign-up-form .checkbox input + span {
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        border: solid 2px #dee2e8;
+        display: block;
+        position: absolute; }
+        .sign-up-form .checkbox input + span:hover {
+          cursor: pointer; }
+      .sign-up-form .checkbox input:checked + span:before {
+        content: "";
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        width: 16px;
+        height: 16px;
+        background: #3f80ff;
+        border-radius: 2px; }
+    .sign-up-form .checkbox .text {
+      margin-left: 30px;
+      top: 2px;
+      position: relative; }
+  .sign-up-form input {
+    display: block; }
+    .sign-up-form input[type="text"] {
+      margin: auto;
+      outline: none !important;
+      border-radius: 4px;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background-color: #ffffff;
+      font-size: 16px;
+      font-weight: 500;
+      border: solid 2px #dee2e8;
+      width: 100%;
+      box-sizing: border-box;
+      height: auto;
+      margin-top: 0;
+      margin-bottom: 0;
+      box-shadow: none;
+      padding: 13px;
+      outline: none !important; }
+  .sign-up-form .under {
+    width: 100%;
+    position: absolute;
+    bottom: -104px;
+    left: 0; }
