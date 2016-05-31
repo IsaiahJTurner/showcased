@@ -8,6 +8,10 @@ if (!process.env.FIREBASE_SERVICE_ACCOUNT || !process.env.PASSWORD) {
   return console.log("set FIREBASE_SERVICE_ACCOUNT and PASSWORD");
 }
 
+if (typeof process.env.FIREBASE_SERVICE_ACCOUNT === "object") {
+  process.env.FIREBASE_SERVICE_ACCOUNT = JSON.stringify(process.env.FIREBASE_SERVICE_ACCOUNT);
+}
+
 var express = require('express');
 var Firebase = require("firebase");
 var yaml = require('js-yaml');
