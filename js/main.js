@@ -34,7 +34,7 @@ jQuery.fn.extend({
 $(document).ready(function() {
   var done = false;
   $(this).scroll(function() {
-    if ($(this).scrollTop() >= 130) {
+    if ($(this).scrollTop() >=60) {
       $(".video").children(".phone.iphone, .phone.nexus").addClass("animateIn");
     } else {
       $(".video").children(".phone.iphone, .phone.nexus").removeClass("animateIn");
