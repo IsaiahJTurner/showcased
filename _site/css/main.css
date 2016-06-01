@@ -95,7 +95,9 @@ a {
     z-index: 2;
     position: relative; }
     .banner .header .wrapper {
-      height: 182px; }
+      height: 182px;
+      padding-left: 30px;
+      padding-right: 30px; }
     .banner .header .upper {
       position: relative; }
       .banner .header .upper .logo {
@@ -324,17 +326,15 @@ a {
     position: absolute;
     top: 0;
     text-align: center; }
-    .banner .apps .image-set {
-      display: inline; }
-      .banner .apps .image-set img {
-        display: inline;
-        width: 258px;
-        height: 146.86px;
-        padding: 5px; }
-        @media screen and (max-width: 535px) {
-          .banner .apps .image-set img {
-            width: 129px;
-            height: 73.43px; } }
+    .banner .apps .image-set img {
+      display: inline;
+      width: 258px;
+      height: 146.86px;
+      padding: 5px; }
+      @media screen and (max-width: 535px) {
+        .banner .apps .image-set img {
+          width: 129px;
+          height: 73.43px; } }
 
 .content .share-work {
   position: relative;
