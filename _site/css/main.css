@@ -34,7 +34,7 @@ a:hover { color: #131720; text-decoration: underline; }
 /** Site header */
 .banner { position: relative; overflow: hidden; }
 .banner .header { border-top: 38px solid black; background-image: linear-gradient(to bottom, #000000, transparent); z-index: 2; position: relative; }
-.banner .header .wrapper { height: 182px; }
+.banner .header .wrapper { height: 182px; padding-left: 30px; padding-right: 30px; }
 .banner .header .upper { position: relative; }
 .banner .header .upper .logo { width: 158px; height: 17px; background-image: url("../img/logo.svg"); display: inline-block; position: absolute; top: -3px; left: 0; background-repeat: no-repeat; }
 .banner .header .upper .sign-up { top: -10px; position: absolute; right: 0; width: 106px; height: 42px; border-radius: 8px; border: solid 2px rgba(255, 255, 255, 0.5); font-size: 18px; color: #ffffff; outline: none !important; background: none !important; cursor: pointer !important; }
