@@ -215,6 +215,9 @@
         width: $iphoneWidth;
         @include background-image-retina("../img/demo/iPhone", png, 0, 0);
         transform: rotate(-90deg) translateY(100px);
+        @include media-query(650px) {
+          transform: rotate(-90deg) translateY(110px);
+        }
         &.animateIn {
           transform: rotate(0) translateY(0);
         }
@@ -237,7 +240,7 @@
         @include background-image-retina("../img/demo/Nexus", png, 0, 0);
         transform: rotate(90deg) translateY(100px);
         @include media-query(650px) {
-          transform: rotate(90deg) translateY(100px) translateX(-207px);
+          transform: rotate(90deg) translateY(110px) translateX(-207px);
         }
         &.animateIn {
           transform: rotate(0) translateY(0);
