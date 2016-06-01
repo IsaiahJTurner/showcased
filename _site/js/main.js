@@ -37,6 +37,9 @@ jQuery.fn.extend({
 $(document).ready(function() {
   if (document.location.search === "?ref=producthunt") {
     $(".ryan-hoover-is-the-best").css("display", "block");
+    $(".ryan-hoover-is-the-best").click(function() {
+      $(this).css("display", "none");
+    })
   }
   var done = false;
   var playing;

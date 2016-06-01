@@ -9,6 +9,11 @@
   font-weight: 500;
   padding: 13px 20px;
   display: none;
+  cursor: pointer;
+  transition: background 0.1s linear;
+  &:hover {
+    background: #da552f;
+  }
 }
 .banner {
   position: relative;
