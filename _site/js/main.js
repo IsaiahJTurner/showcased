@@ -199,16 +199,35 @@ $(document).ready(function() {
 
   var imageCount;
   var isFirst = true;
+  var isSecond = true;
 
   function addImageSet() {
     shuffle(imageIds);
     var $imageSet = $('<div class="image-set" data-id="' + (setsCreated++) + '"></div>');
     setTimeout(function() {
       $imageSet.css({
-        transform: "translateZ(0px) translateY(-3210px)",
-        transition: "transform 750s linear"
+        transform: "translateY(-" + $imageSet.height() + "px)",
+        transition: "transform 5s linear"
       });
     }, 100);
+    if (!isSecond) {
+      $apps.children().first().remove();
+      var $next = $apps.children().first();
+      $next.css({
+        transform: "none",
+        transition: "none"
+      });
+      setTimeout(function() {
+        $next.css({
+          transform: "translateY(-" + $imageSet.height() + "px)",
+          transition: "transform 5s linear"
+        });
+      }, 100);
+    }
+    if (!isFirst) {
+      isSecond = false;
+    }
+
     for (var i = 0; i < imageIds.length; i++) {
       var ratio = Math.min(Math.ceil(window.devicePixelRatio), 3);
       var version = ratio > 1 ? "@" + ratio + "x" : "";
@@ -227,6 +246,6 @@ $(document).ready(function() {
   }
   addImageSet();
   addImageSet();
-  setInterval(addImageSet, 1500 * 1000);
+  setInterval(addImageSet, 5 * 1000);
 
 });
