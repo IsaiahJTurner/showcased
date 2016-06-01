@@ -36,11 +36,24 @@ jQuery.fn.extend({
 });
 $(document).ready(function() {
   var done = false;
+  var playing = false;
   $(this).scroll(function() {
     var animationPoint = $(window).height() > 400 ? 60 : 250;
     if ($(this).scrollTop() >= animationPoint) {
+      if (!playing) {
+        mixpanel.track("Watch Video", {
+          reverse: false
+        });
+      }
+      playing = true;
       $(".video").children(".phone.iphone, .phone.nexus").addClass("animateIn");
     } else {
+      if (playing) {
+        mixpanel.track("Watch Video", {
+          reverse: true
+        });
+      }
+      playing = false;
       $(".video").children(".phone.iphone, .phone.nexus").removeClass("animateIn");
     }
   });
@@ -54,27 +67,49 @@ $(document).ready(function() {
     infinite: true
   });
   $("#sign-up-form").submit(function() {
+    mixpanel.track("Sign Up Form Submitted", {
+      footer: true
+    });
     $("#sign-up-footer").click();
   });
   var validateForm = function(email, isEventOrganizer) {
     if (email.length < 6) {
-      swal.showInputError("You need to enter an email address!");
+      var title = "You need to enter an email address!";
+      mixpanel.track("Error", {
+        title: title
+      });
+      swal.showInputError(title);
       return false;
     }
     return true;
   };
   var submitForm = function(email, isEventOrganizer, callback) {
+    var now = Date.now();
     $.ajax({
       url: firebaseDatabseURL + "/submissions.json",
       type: "POST",
       data: JSON.stringify({
         email: email,
         isEventOrganizer: isEventOrganizer,
-        createdAt: Date.now()
+        createdAt: now
       }),
-      success: function() {
+      success: function(data) {
+        ga('set', 'userId', data.name);
+        ga('set', 'email', email);
+        ga('set', 'isEventOrganizer', isEventOrganizer);
+        mixpanel.alias(data.name);
+        mixpanel.people.set({
+          "isEventOrganizer": isEventOrganizer,
+          "$created": now,
+          "$email": email
+        });
+        mixpanel.track("Signed Up");
+        var title = "Thanks for signing up!";
+        mixpanel.track("Overlay Opened", {
+          title: title
+        });
         swal({
-          title: "Thanks for signing up!",
+          title: title,
           text: 'We’ll get in touch with you as soon as we are ready!<button class="twitter" onclick="shareTwitter()"></button><button class="facebook" onclick="shareFacebook()"></button>',
           type: "success",
           showConfirmButton: false,
@@ -82,23 +117,37 @@ $(document).ready(function() {
           html: true
         });
         $(".sweet-overlay").click(function() {
+          mixpanel.track("Overlay Closed", {
+            title: title
+          });
           swal.close();
         });
         $("button.facebook").click(function() {
+          mixpanel.track("Shared On Facebook");
           window.open("https://www.facebook.com/sharer/sharer.php?u=http%3A//tryshowcase.com");
         });
         $("button.twitter").click(function() {
+          mixpanel.track("Shared On Twitter");
           window.open("https://www.twitter.com/share?u=http%3A//tryshowcase.com&text=Check out Showcase!&via=ShowcaseSupport&hashtags=Showcase");
         });
         callback(false);
       },
       error: function(error) {
         callback(true);
-        swal.showInputError("Submit failed");
+        var title = "Submit failed";
+        mixpanel.track("Error", {
+          title: title,
+          details: error,
+          info: "Firebase submit failed"
+        });
+        swal.showInputError(title);
       }
     });
   }
   $("#sign-up-footer").click(function() {
+    mixpanel.track("Sign Up Button Clicked", {
+      footer: true
+    });
     var email = $("#sign-up-form .email").val();
     var isEventOrganizer = $("#sign-up-form .organizer").is(':checked');
     if (!validateForm(email, isEventOrganizer)) {
@@ -106,15 +155,23 @@ $(document).ready(function() {
     }
     submitForm(email, isEventOrganizer, function(error) {
       if (error) {
+        mixpanel.track("Error", {
+          title: error,
+          info: "Failed to submit footer form"
+        });
         $("#sign-up").click();
       }
     });
   });
   $("#sign-up").click(function() {
     /*jshint multistr: true */
-
+    mixpanel.track("Sign Up Button Clicked");
+    var title = "Sign up now to reserve your spot";
+    mixpanel.track("Overlay Opened", {
+      title: title
+    });
     var $swal = swal({
-      title: "Sign up now to reserve your spot",
+      title: title,
       text: $("#sign-up-form").html(),
       showCancelButton: false,
       closeOnConfirm: false,
@@ -133,6 +190,9 @@ $(document).ready(function() {
     });
     $(".sweet-alert .email").focus();
     $(".sweet-overlay").click(function() {
+      mixpanel.track("Overlay Closed", {
+        title: title
+      });
       swal.close();
     });
   });
