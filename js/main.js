@@ -36,24 +36,16 @@ jQuery.fn.extend({
 });
 $(document).ready(function() {
   var done = false;
-  var playing = false;
+  var playing;
   $(this).scroll(function() {
     var animationPoint = $(window).height() > 400 ? 60 : 250;
     if ($(this).scrollTop() >= animationPoint) {
       if (!playing) {
-        mixpanel.track("Watch Video", {
-          reverse: false
-        });
+        mixpanel.track("Watch Video");
       }
       playing = true;
       $(".video").children(".phone.iphone, .phone.nexus").addClass("animateIn");
     } else {
-      if (playing) {
-        mixpanel.track("Watch Video", {
-          reverse: true
-        });
-      }
-      playing = false;
       $(".video").children(".phone.iphone, .phone.nexus").removeClass("animateIn");
     }
   });
