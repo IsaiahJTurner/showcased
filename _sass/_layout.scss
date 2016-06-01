@@ -227,6 +227,9 @@
         border-radius: 2px;
         @include background-image-retina("../img/demo/Nexus", png, 0, 0);
         transform: rotate(90deg) translateY(100px);
+        @include  media-query(650px) {
+          transform: rotate(90deg) translateY(100px) translateX(-207px);
+        }
         &.animateIn {
           transform: rotate(0) translateY(0);
         }
