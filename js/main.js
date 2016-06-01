@@ -91,6 +91,7 @@ $(document).ready(function() {
       data: JSON.stringify({
         email: email,
         isEventOrganizer: isEventOrganizer,
+        referrer: document.referrer,
         createdAt: now
       }),
       success: function(data) {
