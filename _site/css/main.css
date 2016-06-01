@@ -77,7 +77,6 @@ a:hover { color: #131720; text-decoration: underline; }
 .banner .apps-overlay { position: absolute; background: rgba(0, 0, 0, 0.5); z-index: 1; height: 100%; width: 100%; top: 0; }
 .banner .apps-overlay .bottom-shadow { position: absolute; bottom: 0; width: 100%; height: 146px; background: linear-gradient(to top, #000000, transparent); }
 .banner .apps { line-height: 0; font-size: 0; background: black; z-index: 0; position: absolute; top: 0; text-align: center; }
-.banner .apps .image-set { display: inline; }
 .banner .apps .image-set img { display: inline; width: 258px; height: 146.86px; padding: 5px; }
 @media screen and (max-width: 535px) { .banner .apps .image-set img { width: 129px; height: 73.43px; } }
 
