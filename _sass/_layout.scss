@@ -454,7 +454,8 @@
       margin-bottom: 23px;
     }
     .submit {
-      width: 320px;
+      width: 100%;
+      max-width: 320px;
       height: 48px;
       border-radius: 4px;
       background-color: #3f80ff;
