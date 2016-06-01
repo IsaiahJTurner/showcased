@@ -17,6 +17,9 @@ function shuffle(array) {
 
   return array;
 }
+var shareTwitter = function() {
+  console.log("memes");
+};
 jQuery.fn.extend({
   lazyload: function() {
     var $this = this;
@@ -32,21 +35,9 @@ jQuery.fn.extend({
   }
 });
 $(document).ready(function() {
-  swal({
-    title: "Thanks for signing up!",
-    text: 'We’ll get in touch with you as soon as we are ready!<button class="twitter" onclick="shareTwitter()"></button><button class="facebook" onclick="shareFacebook()"></button>',
-    type: "success",
-    showConfirmButton: false,
-    showCancelButton: false,
-    html: true
-  });
-  $(".sweet-overlay").click(function() {
-    swal.close();
-  });
   var done = false;
   $(this).scroll(function() {
     var animationPoint = $(window).height() > 400 ? 60 : 250;
-    console.log(animationPoint)
     if ($(this).scrollTop() >= animationPoint) {
       $(".video").children(".phone.iphone, .phone.nexus").addClass("animateIn");
     } else {
@@ -92,6 +83,12 @@ $(document).ready(function() {
         });
         $(".sweet-overlay").click(function() {
           swal.close();
+        });
+        $("button.facebook").click(function() {
+          window.open("https://www.facebook.com/sharer/sharer.php?u=http%3A//tryshowcase.com");
+        });
+        $("button.twitter").click(function() {
+          window.open("https://www.twitter.com/share?u=http%3A//tryshowcase.com&text=Check out Showcase!&via=TryShowcased&hashtags=Showcase");
         });
         callback(false);
       },
