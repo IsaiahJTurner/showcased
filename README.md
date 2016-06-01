@@ -3,6 +3,9 @@
 Designer: Mahad Qureshi
 Developer: Isaiah Turner
 
+## Start App
+`bundle exec jekyll serve`
+
 ## Heroku Setup Requirements
 Heroku is only used for retrieving the data from Firebase in a usable (CSV) format and is not required for using this repository. This entire project can be run entirely with a Firebase app and a GitHub Pages site.
 

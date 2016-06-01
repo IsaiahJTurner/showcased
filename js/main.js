@@ -199,14 +199,32 @@ $(document).ready(function() {
 
   var imageCount;
   var isFirst = true;
+  var height = 0;
+  var speedSeconds = 5;
 
   function addImageSet() {
+    var $appsChildren = $(".apps").children();
+    if ($appsChildren.length === 2) {
+      $appsChildren.first().remove();
+      var $first = $(".apps").children().last().css({
+        transform: "none",
+        transition: "none"
+      });
+      setTimeout(function() {
+        $first.css({
+          transform: "translateY(-" + height + "px)",
+          transition: "transform " + speedSeconds + "s linear"
+        });
+      }, 100);
+    }
     shuffle(imageIds);
     var $imageSet = $('<div class="image-set" data-id="' + (setsCreated++) + '"></div>');
+    console.log($imageSet.height())
     setTimeout(function() {
+      height = $imageSet.height();
       $imageSet.css({
-        transform: "translateZ(0px) translateY(-3210px)",
-        transition: "transform 750s linear"
+        transform: "translateY(-" + height + "px)",
+        transition: "transform " + speedSeconds + "s linear"
       });
     }, 100);
     for (var i = 0; i < imageIds.length; i++) {
@@ -227,6 +245,5 @@ $(document).ready(function() {
   }
   addImageSet();
   addImageSet();
-  setInterval(addImageSet, 1500 * 1000);
-
+  setInterval(addImageSet, speedSeconds * 1000);
 });
