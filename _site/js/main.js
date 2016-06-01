@@ -88,7 +88,7 @@ $(document).ready(function() {
           window.open("https://www.facebook.com/sharer/sharer.php?u=http%3A//tryshowcase.com");
         });
         $("button.twitter").click(function() {
-          window.open("https://www.twitter.com/share?u=http%3A//tryshowcase.com&text=Check out Showcase!&via=TryShowcased&hashtags=Showcase");
+          window.open("https://www.twitter.com/share?u=http%3A//tryshowcase.com&text=Check out Showcase!&via=ShowcaseSupport&hashtags=Showcase");
         });
         callback(false);
       },
