@@ -55,7 +55,6 @@
         color: #ffffff;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
         font-weight: 500;
-
       }
     }
   }
@@ -86,7 +85,7 @@
       $scalePercentage: 0.85;
       height: 400px!important;
       .iphone {
-        margin-right: ($iphoneMarginRight * $scalePercentage)!important;
+        margin-right: ($iphoneMarginRight * $scalePercentage) !important;
         height: ($iphoneHeight * $scalePercentage)!important;
         width: ($iphoneWidth * $scalePercentage)!important;
         .card-container {
@@ -114,7 +113,7 @@
       margin-left: -111px;
       height: 400px!important;
       .iphone {
-        margin-right: ($iphoneMarginRight * $scalePercentage)!important;
+        margin-right: ($iphoneMarginRight * $scalePercentage) !important;
         height: ($iphoneHeight * $scalePercentage)!important;
         width: ($iphoneWidth * $scalePercentage)!important;
         .card-container {
@@ -142,7 +141,7 @@
       $scalePercentage: 0.65;
       height: 400px!important;
       .iphone {
-        margin-right: ($iphoneMarginRight * $scalePercentage)!important;
+        margin-right: ($iphoneMarginRight * $scalePercentage) !important;
         height: ($iphoneHeight * $scalePercentage)!important;
         width: ($iphoneWidth * $scalePercentage)!important;
         .card-container {
@@ -181,7 +180,7 @@
         display: inline-block;
         overflow: hidden;
         transition: background 0.2s ease 0.5s;
-        background-color:rgba(0, 0, 0, 0);
+        background-color: rgba(0, 0, 0, 0);
         .card {
           height: 100%;
           width: 100%;
@@ -193,9 +192,9 @@
       }
       &.animateIn {
         .card-container {
-          background-color:rgba(0, 0, 0, 1);
+          background-color: rgba(0, 0, 0, 1);
           .card {
-            margin: 0!important;
+            margin: 0 !important;
           }
         }
       }
@@ -264,13 +263,17 @@
     position: absolute;
     top: 0;
     text-align: center;
-    img {
-      width: 258px;
-      height: 146.86px;
-      padding: 5px;
-      @include media-query(535px) {
-        width: 258px * 0.5;
-        height: 146.86px * 0.5;
+    .image-set {
+      display: inline;
+      img {
+        display: inline;
+        width: 258px;
+        height: 146.86px;
+        padding: 5px;
+        @include media-query(535px) {
+          width: 258px * 0.5;
+          height: 146.86px * 0.5;
+        }
       }
     }
   }
@@ -404,7 +407,8 @@
       }
       @include media-query(500px) {
         height: initial;
-        .iphone, .nexus {
+        .iphone,
+        .nexus {
           width: 100%;
           display: block;
           position: relative;
@@ -446,11 +450,11 @@
     }
     .submit {
       width: 320px;
-    	height: 48px;
-    	border-radius: 4px;
-    	background-color: #3f80ff;
+      height: 48px;
+      border-radius: 4px;
+      background-color: #3f80ff;
       font-size: 16px;
-    	color: #ffffff;
+      color: #ffffff;
       font-weight: bold;
       border: none;
       margin-top: 23px;
@@ -548,6 +552,68 @@
     width: 320px;
     margin-bottom: 64px;
     padding: 14px;
+  }
+  .twitter {
+    width: 240px;
+    height: 48px;
+    border-radius: 4px;
+    background-color: #059ff5;
+    position: relative;
+    display: block;
+    margin: 28px auto 8px;
+    &:before {
+      content: "";
+      position: absolute;
+      background-image: url('../img/social-twitter-white.svg');
+      width: 23px;
+      height: 18px;
+      background-repeat: no-repeat;
+      background-size: contain;
+	    left: 15px;
+      top: 15px;
+    }
+    &:after {
+      content: "Share on Twitter";
+      position: absolute;
+      left: 50px;
+      height: 100%;
+      top: 0;
+      padding-top: 14px;
+    }
+  }
+  .facebook {
+    width: 240px;
+    height: 48px;
+    border-radius: 4px;
+    background: #3b5998;
+    display: block;
+    margin: auto;
+    position: relative;
+    &:hover {
+      background: #49649C;
+    }
+    &:active {
+      background: #3C5B9A;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      background-image: url('../img/social-facebook.svg');
+      width: 18px;
+      height: 18px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: 15px;
+      top: 15px;
+    }
+    &:after {
+      content: "Share on Facebook";
+      position: absolute;
+      left: 50px;
+      height: 100%;
+      top: 0;
+      padding-top: 14px;
+    }
   }
 }
 .sign-up-form {

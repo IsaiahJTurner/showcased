@@ -32,6 +32,14 @@ jQuery.fn.extend({
   }
 });
 $(document).ready(function() {
+  swal({
+    title: "Thanks for signing up!",
+    text: 'We’ll get in touch with you as soon as we are ready!<button class="twitter" onclick="shareTwitter()"></button><button class="facebook" onclick="shareFacebook()"></button>',
+    type: "success",
+    showConfirmButton: false,
+    showCancelButton: false,
+    html: true
+  });
   var done = false;
   $(this).scroll(function() {
     var animationPoint = $(window).height() > 400 ? 60 : 250;
@@ -73,7 +81,7 @@ $(document).ready(function() {
       success: function() {
         swal({
           title: "Thanks for signing up!",
-          text: 'We’ll get in touch with you as soon as we are ready!<button class="twitter" onclick="shareTwitter()"></button><button onclick="shareFacebook()"></button>',
+          text: 'We’ll get in touch with you as soon as we are ready!<button class="twitter" onclick="shareTwitter()"></button><button class="facebook" onclick="shareFacebook()"></button>',
           type: "success",
           showConfirmButton: false,
           showCancelButton: false,
@@ -151,7 +159,7 @@ $(document).ready(function() {
     for (var i = 0; i < imageIds.length; i++) {
       var version = window.devicePixelRatio > 1 ? "@" + window.devicePixelRatio + "x" : "";
       var event = "image-" + (imageCount++);
-      var $image = $('<img data-original="img/cards/' + imageIds[i] + version + '.png" width="100" height="200" />');
+      var $image = $('<img data-original="img/cards/' + imageIds[i] + version + '.png" />');
       if (isFirst) {
         $image.lazyload();
       } else {
