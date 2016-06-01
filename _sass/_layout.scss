@@ -69,6 +69,100 @@
     margin: auto;
     font-size: 0;
     top: 190px;
+    $iphoneMarginRight: 10px;
+    $iphoneHeight: 321px;
+    $iphoneWidth: 651px;
+    $nexusHeight: 323px;
+    $nexusWidth: 647px;
+    $nexusContainerWidth: 518px;
+    $nexusContainerHeight: 292px;
+    $nexusContainerTop: 16px;
+    $nexusContainerLeft: -4px;
+    $iphoneContainerLeft: 0;
+    $iphoneContainerTop: 23px;
+    $iphoneContainerWidth: 490px;
+    $iphoneContainerHeight: 276px;
+    @include media-query(1350px) {
+      $scalePercentage: 0.85;
+      height: 400px!important;
+      .iphone {
+        margin-right: ($iphoneMarginRight * $scalePercentage)!important;
+        height: ($iphoneHeight * $scalePercentage)!important;
+        width: ($iphoneWidth * $scalePercentage)!important;
+        .card-container {
+          top: ($iphoneContainerTop * $scalePercentage)!important;
+          left: ($iphoneContainerLeft * $scalePercentage)!important;
+          width: ($iphoneContainerWidth * $scalePercentage)!important;
+          height: ($iphoneContainerHeight * $scalePercentage)!important;
+        }
+      }
+      .nexus {
+        height: ($nexusHeight * $scalePercentage)!important;
+        width: ($nexusWidth * $scalePercentage)!important;
+        .card-container {
+          top: ($nexusContainerTop * $scalePercentage)!important;
+          left: ($nexusContainerLeft * $scalePercentage)!important;
+          width: ($nexusContainerWidth * $scalePercentage)!important;
+          height: ($nexusContainerHeight * $scalePercentage)!important;
+        }
+      }
+    }
+    @include media-query(1150px) {
+      top: 120px;
+      $scalePercentage: 0.75;
+      width: calc(100% + 200px);
+      margin-left: -111px;
+      height: 400px!important;
+      .iphone {
+        margin-right: ($iphoneMarginRight * $scalePercentage)!important;
+        height: ($iphoneHeight * $scalePercentage)!important;
+        width: ($iphoneWidth * $scalePercentage)!important;
+        .card-container {
+          top: ($iphoneContainerTop * $scalePercentage)!important;
+          left: ($iphoneContainerLeft * $scalePercentage)!important;
+          width: ($iphoneContainerWidth * $scalePercentage)!important;
+          height: ($iphoneContainerHeight * $scalePercentage)!important;
+        }
+      }
+      .nexus {
+        height: ($nexusHeight * $scalePercentage)!important;
+        width: ($nexusWidth * $scalePercentage)!important;
+        .card-container {
+          top: ($nexusContainerTop * $scalePercentage)!important;
+          left: ($nexusContainerLeft * $scalePercentage)!important;
+          width: ($nexusContainerWidth * $scalePercentage)!important;
+          height: ($nexusContainerHeight * $scalePercentage)!important;
+        }
+      }
+    }
+    @include media-query(875px) {
+      width: calc(100% + 200px);
+      margin-left: -111px;
+      top: 120px;
+      $scalePercentage: 0.65;
+      height: 400px!important;
+      .iphone {
+        margin-right: ($iphoneMarginRight * $scalePercentage)!important;
+        height: ($iphoneHeight * $scalePercentage)!important;
+        width: ($iphoneWidth * $scalePercentage)!important;
+        .card-container {
+          top: ($iphoneContainerTop * $scalePercentage)!important;
+          left: ($iphoneContainerLeft * $scalePercentage)!important;
+          width: ($iphoneContainerWidth * $scalePercentage)!important;
+          height: ($iphoneContainerHeight * $scalePercentage)!important;
+        }
+      }
+      .nexus {
+        height: ($nexusHeight * $scalePercentage)!important;
+        width: ($nexusWidth * $scalePercentage)!important;
+        .card-container {
+          top: ($nexusContainerTop * $scalePercentage)!important;
+          left: ($nexusContainerLeft * $scalePercentage)!important;
+          width: ($nexusContainerWidth * $scalePercentage)!important;
+          height: ($nexusContainerHeight * $scalePercentage)!important;
+        }
+      }
+    }
     .phone {
       position: relative;
       vertical-align: top;
@@ -106,20 +200,19 @@
         }
       }
       &.iphone {
-        margin-right: 10px;
-        left: 0;
-        height: 321px;
-        width: 651px;
+        margin-right: $iphoneMarginRight;
+        height: $iphoneHeight;
+        width: $iphoneWidth;
         @include background-image-retina("../img/demo/iPhone", png, 0, 0);
         transform: rotate(-90deg) translateY(100px);
         &.animateIn {
           transform: rotate(0) translateY(0);
         }
         .card-container {
-          width: 490px;
-          height: 276px;
-          top: 23px;
-          left: -3px;
+          width: $iphoneContainerWidth;
+          height: $iphoneContainerHeight;
+          top: $iphoneContainerTop;
+          left: $iphoneContainerLeft;
           .card {
             margin: 0 0 0 100%;
             background-image: url('../img/demo/nexus-card.svg');
@@ -127,8 +220,8 @@
         }
       }
       &.nexus {
-        width: 647px;
-        height: 323px;
+        width: $nexusWidth;
+        height: $nexusHeight;
         border-radius: 2px;
         @include background-image-retina("../img/demo/Nexus", png, 0, 0);
         transform: rotate(90deg) translateY(100px);
@@ -136,10 +229,10 @@
           transform: rotate(0) translateY(0);
         }
         .card-container {
-          width: 518px;
-          height: 292px;
-          top: 16px;
-          left: -4px;
+          width: $nexusContainerWidth;
+          height: $nexusContainerHeight;
+          top: $nexusContainerTop;
+          left: $nexusContainerLeft;
           .card {
             margin: 0 0 0 -100%;
             background-image: url('../img/demo/iphone-card.svg');
