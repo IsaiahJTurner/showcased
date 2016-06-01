@@ -215,7 +215,8 @@
           left: $iphoneContainerLeft;
           .card {
             margin: 0 0 0 100%;
-            background-image: url('../img/demo/nexus-card.svg');
+            @include background-image-retina("../img/demo/nexus-card", png, 0, 0);
+            background-size: contain!important;
           }
         }
       }
@@ -235,7 +236,8 @@
           left: $nexusContainerLeft;
           .card {
             margin: 0 0 0 -100%;
-            background-image: url('../img/demo/iphone-card.svg');
+            @include background-image-retina("../img/demo/iphone-card", png, 0, 0);
+            background-size: contain!important;
           }
         }
       }
@@ -388,7 +390,8 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center right;
-        background-image: url('../img/iphone.svg');
+        @include background-image-retina("../img/iPhone", png, 0, 0);
+        background-size: contain!important;
       }
       .nexus {
         position: absolute;
@@ -397,10 +400,11 @@
         display: inline-block;
         height: 280px;
         width: calc(50% - 5px);
-        background-image: url('../img/nexus.svg');
+        @include background-image-retina("../img/Nexus", png, 0, 0);
         background-size: contain;
         background-position: center left;
         background-repeat: no-repeat;
+        background-size: contain!important;
       }
       @include media-query(500px) {
         height: initial;

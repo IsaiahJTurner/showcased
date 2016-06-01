@@ -263,7 +263,15 @@ a {
           left: 0; }
           .banner .video .phone.iphone .card-container .card {
             margin: 0 0 0 100%;
-            background-image: url("../img/demo/nexus-card.svg"); }
+            background-image: url("../img/demo/nexus-card.png");
+            background-size: contain !important; }
+            @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+              .banner .video .phone.iphone .card-container .card {
+                background-image: url("../img/demo/nexus-card@2x.png");
+                -webkit-background-size: 0 0;
+                -moz-background-size: 0 0;
+                -o-background-size: 0 0;
+                background-size: 0 0; } }
       .banner .video .phone.nexus {
         width: 647px;
         height: 323px;
@@ -286,7 +294,15 @@ a {
           left: -4px; }
           .banner .video .phone.nexus .card-container .card {
             margin: 0 0 0 -100%;
-            background-image: url("../img/demo/iphone-card.svg"); }
+            background-image: url("../img/demo/iphone-card.png");
+            background-size: contain !important; }
+            @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+              .banner .video .phone.nexus .card-container .card {
+                background-image: url("../img/demo/iphone-card@2x.png");
+                -webkit-background-size: 0 0;
+                -moz-background-size: 0 0;
+                -o-background-size: 0 0;
+                background-size: 0 0; } }
   .banner .apps-overlay {
     position: absolute;
     background: rgba(0, 0, 0, 0.5);
@@ -419,7 +435,15 @@ a {
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center right;
-      background-image: url("../img/iphone.svg"); }
+      background-image: url("../img/iPhone.png");
+      background-size: contain !important; }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .content .cross-platform .phones .iphone {
+          background-image: url("../img/iPhone@2x.png");
+          -webkit-background-size: 0 0;
+          -moz-background-size: 0 0;
+          -o-background-size: 0 0;
+          background-size: 0 0; } }
     .content .cross-platform .phones .nexus {
       position: absolute;
       right: 0;
@@ -427,10 +451,18 @@ a {
       display: inline-block;
       height: 280px;
       width: calc(50% - 5px);
-      background-image: url("../img/nexus.svg");
+      background-image: url("../img/Nexus.png");
       background-size: contain;
       background-position: center left;
-      background-repeat: no-repeat; }
+      background-repeat: no-repeat;
+      background-size: contain !important; }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .content .cross-platform .phones .nexus {
+          background-image: url("../img/Nexus@2x.png");
+          -webkit-background-size: 0 0;
+          -moz-background-size: 0 0;
+          -o-background-size: 0 0;
+          background-size: 0 0; } }
     @media screen and (max-width: 500px) {
       .content .cross-platform .phones {
         height: initial; }
