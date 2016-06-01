@@ -34,7 +34,9 @@ jQuery.fn.extend({
 $(document).ready(function() {
   var done = false;
   $(this).scroll(function() {
-    if ($(this).scrollTop() >= 60) {
+    var animationPoint = $(window).height() > 400 ? 60 : 250;
+    console.log(animationPoint)
+    if ($(this).scrollTop() >= animationPoint) {
       $(".video").children(".phone.iphone, .phone.nexus").addClass("animateIn");
     } else {
       $(".video").children(".phone.iphone, .phone.nexus").removeClass("animateIn");
