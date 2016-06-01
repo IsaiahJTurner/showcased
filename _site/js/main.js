@@ -40,6 +40,9 @@ $(document).ready(function() {
     showCancelButton: false,
     html: true
   });
+  $(".sweet-overlay").click(function() {
+    swal.close();
+  });
   var done = false;
   $(this).scroll(function() {
     var animationPoint = $(window).height() > 400 ? 60 : 250;
