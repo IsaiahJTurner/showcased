@@ -218,7 +218,8 @@ $(document).ready(function() {
       });
     }, 100);
     for (var i = 0; i < imageIds.length; i++) {
-      var version = window.devicePixelRatio > 1 ? "@" + window.devicePixelRatio + "x" : "";
+      var ratio = Math.min(Math.ceil(window.devicePixelRatio), 3);
+      var version = ratio > 1 ? "@" + ratio + "x" : "";
       var event = "image-" + (imageCount++);
       var $image = $('<img data-original="img/cards/' + imageIds[i] + version + '.png" />');
       if (isFirst) {
