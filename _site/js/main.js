@@ -35,6 +35,9 @@ jQuery.fn.extend({
   }
 });
 $(document).ready(function() {
+  if (document.location.search === "?ref=producthunt") {
+    $(".ryan-hoover-is-the-best").css("display", "block");
+  }
   var done = false;
   var playing;
   $(this).scroll(function() {

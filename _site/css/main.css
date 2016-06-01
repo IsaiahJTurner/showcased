@@ -32,6 +32,8 @@ a:hover { color: #131720; text-decoration: underline; }
 .wrapper:after { content: ""; display: table; clear: both; }
 
 /** Site header */
+.ryan-hoover-is-the-best { background: black; text-align: center; font-size: 20px; color: #ffffff; font-weight: 500; padding: 13px 20px; display: none; }
+
 .banner { position: relative; overflow: hidden; }
 .banner .header { border-top: 38px solid black; background-image: linear-gradient(to bottom, #000000, transparent); z-index: 2; position: relative; }
 .banner .header .wrapper { height: 182px; padding-left: 30px; padding-right: 30px; }
