@@ -213,7 +213,7 @@ $(document).ready(function() {
     setTimeout(function() {
       $imageSet.css({
         transform: "translateY(-" + $imageSet.height() + "px)",
-        transition: "transform 120s linear"
+        transition: "transform 240s linear"
       });
     }, 100);
     if (!isSecond) {
@@ -226,7 +226,7 @@ $(document).ready(function() {
       setTimeout(function() {
         $next.css({
           transform: "translateY(-" + $imageSet.height() + "px)",
-          transition: "transform 120s linear"
+          transition: "transform 240s linear"
         });
       }, 100);
     }
@@ -252,6 +252,6 @@ $(document).ready(function() {
   }
   addImageSet();
   addImageSet();
-  setInterval(addImageSet, 120 * 1000);
+  setInterval(addImageSet, 240 * 1000);
 
 });
